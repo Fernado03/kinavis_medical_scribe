@@ -1,0 +1,155 @@
+[
+  {
+    "id": "SN001",
+    "category": "Chief Complaint",
+    "keywords": ["chief complaint", "CC", "keluhan utama", "main problem", "reason for visit", "mengadu pasal", "datang sebab", "apa masalahnya", "rasa tak sedap badan", "tak sihat"],
+    "example_phrases_en": [
+      "Chief Complaint: Chest pain for two days.",
+      "CC: Sore throat and cough.",
+      "Patient states: 'I feel very tired all the time.'"
+    ],
+    "example_phrases_ms": [
+      "Keluhan Utama: Sakit dada selama dua hari.",
+      "KU: Sakit tekak dan batuk.",
+      "Pesakit menyatakan: 'Saya rasa sangat letih sepanjang masa.'",
+      "Mengadu pasal sakit perut sejak semalam.",
+      "Datang sebab demam dan selsema.",
+      "Apa masalahnya, encik/cik?",
+      "Rasa tak sedap badan sudah tiga hari.",
+      "Badan saya tak sihat."
+    ],
+    "gemini_instructions": "Record the patient's primary reason for seeking medical care. Understand and interpret common Malaysian slang and colloquialisms used to describe their main problem. Keep the statement brief and direct, ideally in the patient's own words. Enclose direct quotes in quotation marks.",
+    "notes_for_scribe": "Identify the most pressing issue from the patient's perspective, even if expressed informally. Be aware of regional variations in slang."
+  },
+  {
+    "id": "SN002",
+    "category": "History of Present Illness",
+    "keywords": ["history of present illness", "HPI", "riwayat penyakit sekarang", "kronologi keluhan", "OLDCARTS", "cerita pasal sakit ni", "mula-mula rasa", "lepas tu", "kemudian", "sudah berapa lama", "kat mana sakitnya", "macam mana rasa sakitnya", "apa yang buat lagi sakit", "apa yang buat kurang sakit", "ada menjalar ke mana-mana", "bila biasanya sakit", "berapa teruk sakitnya"],
+    "example_phrases_en": [
+      "HPI: 65-year-old male presenting with two days of chest pain...",
+      "The patient is a 32-year-old female with a one-week history of cough...",
+      "Onset was sudden yesterday morning..."
+    ],
+    "example_phrases_ms": [
+      "RPS: Lelaki berusia 65 tahun datang dengan sakit dada selama dua hari...",
+      "Pesakit adalah wanita berusia 32 tahun dengan riwayat batuk selama seminggu...",
+      "Awalnya terjadi tiba-tiba pagi kemarin...",
+      "Mari saya cerita pasal sakit saya ni...",
+      "Mula-mula rasa pening sikit-sikit.",
+      "Lepas tu, terus sakit kepala kuat.",
+      "Sudah dekat seminggu batuk ni.",
+      "Sakitnya kat bahagian perut bawah ni.",
+      "Rasa sakitnya macam kena cucuk-cucuk.",
+      "Kalau bergerak, lagi sakit.",
+      "Bila rehat, kurang sikit sakitnya.",
+      "Sakit ni ada menjalar sampai ke belakang.",
+      "Biasanya sakitnya waktu malam.",
+      "Sakitnya ni boleh tahan, dalam 6/10."
+    ],
+    "gemini_instructions": "Provide a chronological account of the chief complaint using the OLDCARTS framework. Understand and interpret Malaysian slang and colloquialisms related to the onset, location, duration, character, aggravating/alleviating factors, radiation, timing, and severity of the symptoms. Include the patient's age, sex, and reason for the visit at the beginning.",
+    "notes_for_scribe": "Be detailed and systematic, even when the patient's description is informal. Translate slang into more formal medical terms where appropriate while retaining the patient's narrative."
+  },
+  {
+    "id": "SN002_1",
+    "category": "HPI - Onset",
+    "keywords": ["onset", "bila bermula", "when did it start", "initial occurrence", "mula-mula", "start dia", "dari bila", "sejak bila"],
+    "example_phrases_en": ["Symptoms began two days ago.", "Started suddenly this morning.", "Gradual onset over the past week."],
+    "example_phrases_ms": ["Gejala bermula dua hari lalu.", "Mulai tiba-tiba pagi ini.", "Awalnya bertahap selama seminggu terakhir.", "Mula-mula rasa lain macam dua hari lepas.", "Start dia pagi tadi masa bangun tidur.", "Dari hari Isnin lagi sakit ni.", "Sejak minggu lepas lagi saya perasan."],
+    "gemini_instructions": "Document when the symptoms first started, understanding informal time references in Malaysian slang.",
+    "notes_for_scribe": "Note the specific time frame or event associated with the start of the symptoms, converting informal references to specific dates or times if possible."
+  },
+  {
+    "id": "SN002_2",
+    "category": "HPI - Location",
+    "keywords": ["location", "lokasi", "where is it", "area of symptom", "kat mana", "bahagian mana", "tempat sakit", "sini sakit", "sebelah sini"],
+    "example_phrases_en": ["Pain is located in the center of the chest.", "Soreness is primarily in the throat.", "Headache is behind the eyes."],
+    "example_phrases_ms": ["Sakit terletak di tengah dada.", "Nyeri terutama di tenggorokan.", "Sakit kepala di belakang mata.", "Sakitnya kat tengah dada ni.", "Bahagian tekak ni rasa perit.", "Tempat sakitnya belakang mata."],
+    "gemini_instructions": "Specify the exact location(s) where the symptom is felt, interpreting potentially vague descriptions using Malaysian slang.",
+    "notes_for_scribe": "Be precise in describing the anatomical location, even if the patient uses informal terms like 'sini' or 'sebelah sini'. Clarify the location if needed."
+  },
+  {
+    "id": "SN002_3",
+    "category": "HPI - Duration",
+    "keywords": ["duration", "berapa lama", "how long", "persistence of symptom", "sudah berapa hari", "sudah lama", "kejap-kejap", "kadang-kadang", "sejak bila"],
+    "example_phrases_en": ["Symptoms have lasted for two days.", "The pain comes and goes.", "Has been feeling this way for about a week."],
+    "example_phrases_ms": ["Gejala sudah berlangsung selama dua hari.", "Sakitnya datang dan pergi.", "Sudah merasa seperti ini selama sekitar seminggu.", "Sudah dekat seminggu batuk ni.", "Sakit ni kejap ada kejap tak ada.", "Kadang-kadang rasa pening.", "Sejak dari hari tu lagi."],
+    "gemini_instructions": "Indicate how long the symptom has been present, understanding informal references to time in Malaysian slang.",
+    "notes_for_scribe": "Note if the symptom is constant, intermittent, or fluctuating, and the approximate duration using standard time units."
+  },
+  {
+    "id": "SN002_4",
+    "category": "HPI - Character",
+    "keywords": ["character", "sifat", "description", "how does it feel", "rasa macam mana", "macam", "pedih", "nyut-nyut", "cucuk-cucuk", "senak", "berdebar", "gatal", "perit", "loya"],
+    "example_phrases_en": ["The pain is sharp and stabbing.", "Feels like a dull ache.", "The cough is dry and hacking."],
+    "example_phrases_ms": ["Sakitnya tajam dan menusuk.", "Terasa seperti nyeri tumpul.", "Batuknya kering dan terus-menerus.", "Rasa macam kena cucuk-cucuk perut ni.", "Kepala rasa nyut-nyut.", "Tekak rasa pedih."],
+    "gemini_instructions": "Describe the nature or quality of the symptom using descriptive words, interpreting Malaysian slang terms for different sensations.",
+    "notes_for_scribe": "Use the patient's own words if possible to capture the character accurately, and provide a more formal medical description alongside if appropriate."
+  },
+  {
+    "id": "SN002_5",
+    "category": "HPI - Aggravating/Alleviating Factors",
+    "keywords": ["aggravating factors", "alleviating factors", "memperburuk", "meringankan", "what makes it worse", "what makes it better", "kalau buat apa lagi sakit", "bila buat apa kurang sakit", "lagi teruk kalau", "kurang sikit kalau"],
+    "example_phrases_en": ["Pain is worse with exertion.", "Rest seems to make it better.", "Eating spicy food aggravates the heartburn."],
+    "example_phrases_ms": ["Sakit bertambah buruk dengan aktivitas fisik.", "Istirahat sepertinya membuatnya lebih baik.", "Makan makanan pedas memperparah sakit maag.", "Kalau jalan banyak, lagi sakit pinggang ni.", "Bila baring, kurang sikit sakitnya.", "Makan pedas memang buat perut saya tak selesa."],
+    "gemini_instructions": "Note any factors that worsen or improve the symptom, understanding informal descriptions of activities and remedies in Malaysian slang.",
+    "notes_for_scribe": "Include specific activities, medications, or positions that affect the symptom, using clear and concise language."
+  },
+  {
+    "id": "SN002_6",
+    "category": "HPI - Radiation",
+    "keywords": ["radiation", "menjalar", "spreads to", "does it go anywhere else", "ada pergi ke mana-mana", "merebak ke", "sampai ke"],
+    "example_phrases_en": ["The pain radiates down his left arm.", "Soreness does not spread anywhere.", "Headache radiates to the neck."],
+    "example_phrases_ms": ["Sakitnya menjalar ke lengan kiri.", "Nyeri tidak menyebar ke mana pun.", "Sakit kepala menjalar ke leher.", "Sakit dada ni ada pergi sampai ke bahu.", "Tak ada merebak ke mana-mana.", "Dari kepala ni rasa sampai ke tengkuk."],
+    "gemini_instructions": "Document if the symptom spreads to other parts of the body, understanding informal descriptions of anatomical connections in Malaysian slang.",
+    "notes_for_scribe": "Specify the direction and extent of any radiation using standard anatomical terms."
+  },
+  {
+    "id": "SN002_7",
+    "category": "HPI - Timing",
+    "keywords": ["timing", "waktu", "pattern", "when does it occur", "bila biasanya", "selalu", "kadang-kadang", "pagi petang malam", "ada masa-masa dia"],
+    "example_phrases_en": ["Symptoms are worse at night.", "Occurs intermittently throughout the day.", "No specific pattern noted."],
+    "example_phrases_ms": ["Gejala lebih buruk pada malam hari.", "Terjadi sebentar-sebentar sepanjang hari.", "Tidak ada pola khusus yang tercatat.", "Biasanya sakitnya lepas makan.", "Selalu rasa letih di waktu petang.", "Kadang-kadang saja sakit kepala ni."],
+    "gemini_instructions": "Describe any temporal pattern to the symptom (e.g., constant, intermittent, diurnal variation), interpreting informal time references in Malaysian slang.",
+    "notes_for_scribe": "Note if there are specific times of day or situations when the symptom is more or less pronounced, using standard time references."
+  },
+  {
+    "id": "SN002_8",
+    "category": "HPI - Severity",
+    "keywords": ["severity", "keparahan", "pain scale", "how bad is it", "berapa teruk", "sakit sangat ke", "boleh tahan lagi ke", "skala sakit"],
+    "example_phrases_en": ["Pain is rated as a 7/10.", "Severity is mild and tolerable.", "Patient reports the worst pain of their life (10/10)."],
+    "example_phrases_ms": ["Sakit dinilai 7/10.", "Keparahan ringan dan dapat ditoleransi.", "Pesakit melaporkan sakit terburuk dalam hidupnya (10/10).", "Berapa teruk sakit encik/cik?", "Sakit sangat, sampai tak boleh buat kerja.", "Boleh tahan lagi, tapi tak selesa."],
+    "gemini_instructions": "Record the intensity of the symptom, often using a pain scale of 1 to 10. Understand and interpret informal descriptions of pain severity in Malaysian slang.",
+    "notes_for_scribe": "Document the specific number given by the patient or a descriptive term, and try to correlate informal descriptions with a numerical scale if possible."
+  },
+  {
+    "id": "SN003",
+    "category": "Relevant History",
+    "keywords": ["relevant history", "riwayat relevan", "PMH", "PSH", "FamHx", "SocHx", "past medical history", "past surgical history", "family history", "social history", "ada penyakit lain", "pernah operate", "ada keturunan sakit", "pasal kehidupan dia"],
+    "example_phrases_en": ["PMH: Hypertension, Diabetes.", "PSH: Appendectomy at age 10.", "FamHx: Father with heart disease.", "SocHx: Smokes 1 pack per day."],
+    "example_phrases_ms": ["RML: Hipertensi, Diabetes.", "RBH: Apendektomi pada usia 10 tahun.", "RKK: Ayah dengan penyakit jantung.", "RSK: Merokok 1 bungkus sehari.", "Ada penyakit lain yang encik/cik ada?", "Pernah operate apa-apa sebelum ni?", "Dalam keluarga ada yang sakit jantung?", "Macam mana kehidupan seharian encik/cik?"],
+    "gemini_instructions": "Document any pertinent past medical history, past surgical history, family history, and social history. Understand informal ways of asking about these aspects in Malaysian slang.",
+    "notes_for_scribe": "Focus on conditions and events relevant to the chief complaint or overall health. Use abbreviations like PMH, PSH, FamHx, SocHx, and clarify any informal descriptions."
+  },
+  {
+    "id": "SN003_1",
+    "category": "Social History",
+    "keywords": ["social history", "SocHx", "riwayat sosial", "HEADSS", "home", "education", "employment", "eating", "activities", "drugs", "sexuality", "suicide", "depression", "rumah macam mana", "kerja apa", "makan macam mana", "buat aktiviti apa", "ada ambil dadah", "pasal hubungan", "rasa sedih"],
+    "example_phrases_en": ["SocHx: Lives at home with spouse. Works as a teacher. Denies drug use. Reports feeling down lately."],
+    "example_phrases_ms": ["RSK: Tinggal di rumah bersama pasangan. Bekerja sebagai guru. Menyangkal penggunaan narkoba. Melaporkan merasa murung akhir-akhir ini.", "Rumah tinggal dengan siapa?", "Kerja buat apa sekarang?", "Macam mana encik/cik makan sehari-hari?", "Ada buat aktiviti riadah?", "Ada ambil barang terlarang?", "Pasal hubungan peribadi?", "Ada rasa sedih atau murung?"],
+    "gemini_instructions": "Document relevant aspects of the patient's social history, considering the HEADSS mnemonic. Understand informal ways of discussing these sensitive topics in Malaysian slang.",
+    "notes_for_scribe": "Be sensitive and thorough when inquiring about social factors that may impact health. Use neutral and respectful language."
+  },
+  {
+    "id": "SN004",
+    "category": "Review of Systems",
+    "keywords": ["review of systems", "ROS", "tinjauan sistem", "additional symptoms", "pertinent positives", "pertinent negatives", "ada rasa lain-lain", "selain tu ada apa lagi", "tak ada rasa...", "semua ok?", "badan macam mana yang lain"],
+    "example_phrases_en": ["ROS: Negative for fever, chills, nausea, vomiting.", "Reports fatigue and occasional night sweats (positive for general symptoms).", "Cardiovascular: Denies chest pain or palpitations."],
+    "example_phrases_ms": ["ROS: Negatif untuk demam, menggigil, mual, muntah.", "Melaporkan kelelahan dan kadang-kadang berkeringat di malam hari (positif untuk gejala umum).", "Kardiovaskular: Menyangkal sakit dada atau palpitasi.", "Selain dari tu, ada rasa lain-lain?", "Badan yang lain semua ok?", "Tak ada rasa pening?", "Semua baik saja?"],
+    "gemini_instructions": "Document a system-by-system review of any additional symptoms reported by the patient. Note both pertinent positives (symptoms present) and pertinent negatives (symptoms absent). Understand informal ways of inquiring about different body systems in Malaysian slang.",
+    "notes_for_scribe": "Systematically go through each major body system. Pay attention to both what the patient reports and what they deny."
+  },
+  {
+    "id": "SN005",
+    "category": "Current Medications",
+    "keywords": ["current medications", "meds", "obat-obatan saat ini", "prescription", "OTC", "over the counter", "ubat yang sekarang ambil", "ada makan ubat", "ubat dari doktor", "beli kat kedai"],
+    "example_phrases_
