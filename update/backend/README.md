@@ -15,6 +15,7 @@ This directory contains the Flask backend for the AI Medical Scribe application.
 3.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
+    pip install openai-whisper  # Add Whisper dependency
     ```
 4.  **Configure Environment Variables:**
     Create a `.env` file in this `backend` directory with the following (adjust as necessary, especially for production):
