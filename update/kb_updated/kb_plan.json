@@ -1,0 +1,101 @@
+[
+  {
+    "id": "PN001",
+    "category": "Diagnostics / Tests Ordered",
+    "keywords": ["diagnostics", "tests ordered", "ujian yang diarahkan", "siasatan", "makmal", "radiologi", "scans", "x-ray", "blood test", "urine test", "ECG", "EKG", "ultrasound", "CT scan", "MRI", "ordered:", "dipesan:", "arahkan:", "due to", "disebabkan oleh", "for", "untuk", "to evaluate", "untuk menilai", "to assess", "untuk mengesan"],
+    "example_phrases_en": [
+      "Diagnostics ordered: CBC, BMP, Urinalysis to rule out infection.",
+      "Tests ordered: Chest X-ray to evaluate for pneumonia.",
+      "MRI brain ordered due to persistent headaches.",
+      "Order ECG to assess for cardiac abnormalities."
+    ],
+    "example_phrases_ms": [
+      "Ujian yang diarahkan: FBC, U&E, Urinalisis untuk menyingkirkan jangkitan.",
+      "Siasatan: X-ray dada untuk menilai pneumonia.",
+      "MRI otak diarahkan disebabkan oleh sakit kepala yang berterusan.",
+      "Pesan ECG untuk mengesan keabnormalan jantung."
+    ],
+    "gemini_instructions": "List all diagnostic tests ordered during this visit. Note the name of the test and the rationale behind ordering it, if provided. Identify the purpose of the test (e.g., rule out, evaluate, assess).",
+    "notes_for_scribe": "Document the specific names of the tests and the clinical reasoning provided by the clinician for ordering them."
+  },
+  {
+    "id": "PN002",
+    "category": "Medications / Therapy",
+    "keywords": ["medications", "therapy", "ubat-ubatan", "terapi", "prescribed", "diresepkan", "new medication", "ubat baru", "increase dose", "tambah dos", "decrease dose", "kurang dos", "continue medication", "teruskan ubat", "discontinue medication", "berhenti ubat", "initiated", "dimulakan", "start", "mulakan", "PO", "IV", "IM", "SC", "topical", "oral", "intravenous", "intramuscular", "subcutaneous", "sapuan", "oral", "intravena", "intramuskular", "subkutaneus", "sapu"],
+    "example_phrases_en": [
+      "Medications: Prescribed Amoxicillin 500mg PO TID for 7 days.",
+      "Increase Lisinopril dose to 20mg daily.",
+      "Discontinue Metformin.",
+      "Initiated physical therapy sessions 3 times per week.",
+      "Continue current medications as prescribed."
+    ],
+    "example_phrases_ms": [
+      "Ubat-ubatan: Diresepkan Amoxicillin 500mg PO TID selama 7 hari.",
+      "Tambah dos Lisinopril menjadi 20mg setiap hari.",
+      "Berhenti mengambil Metformin.",
+      "Terapi: Dimulakan sesi fisioterapi 3 kali seminggu.",
+      "Teruskan ubat-ubatan seperti yang diresepkan."
+    ],
+    "gemini_instructions": "Document all medications prescribed, changes made to existing medications (increase, decrease, discontinue), and any therapies initiated. Include the medication name, dose, route, and frequency/duration if specified. Note if a medication is new or if existing ones are continued or stopped.",
+    "notes_for_scribe": "Record the precise details of all medication orders and therapy plans, including any changes to previous regimens."
+  },
+  {
+    "id": "PN003",
+    "category": "Referrals / Consults",
+    "keywords": ["referrals", "consults", "rujukan", "konsultasi", "referred to", "dirujuk kepada", "consulted", "dikonsultasi dengan", "specialist", "pakar", "cardiology", "kardiologi", "dermatology", "dermatologi", "neurology", "neurologi", "surgery", "pembedahan", "orthopedics", "ortopedik", "request consult with", "mohon konsultasi dengan"],
+    "example_phrases_en": [
+      "Referral to Cardiology for further evaluation of chest pain.",
+      "Consulted Neurology regarding persistent headaches.",
+      "Referred to Orthopedics for knee pain.",
+      "Request consult with Infectious Disease."
+    ],
+    "example_phrases_ms": [
+      "Rujukan kepada Kardiologi untuk penilaian lanjut sakit dada.",
+      "Konsultasi dengan Neurologi mengenai sakit kepala yang berterusan.",
+      "Dirujuk kepada Ortopedik untuk sakit lutut.",
+      "Mohon konsultasi dengan Pakar Penyakit Berjangkit."
+    ],
+    "gemini_instructions": "Document any specialist referrals or consultations requested by the provider. Note the specialty being referred to or consulted with and the reason for the referral/consultation, if stated.",
+    "notes_for_scribe": "Record the specific specialty and the reason for the referral or consultation request."
+  },
+  {
+    "id": "PN004",
+    "category": "Patient Education & Counseling",
+    "keywords": ["patient education", "counseling", "pendidikan pesakit", "kaunseling", "explained", "dijelaskan", "discussed", "dibincangkan", "regarding", "mengenai", "about", "tentang", "signs and symptoms", "tanda dan gejala", "treatment plan", "pelan rawatan", "medication instructions", "arahan ubat", "lifestyle changes", "perubahan gaya hidup", "diet", "pemakanan", "exercise", "senaman", "follow-up", "susulan", "self-care", "penjagaan diri"],
+    "example_phrases_en": [
+      "Patient education provided regarding diagnosis of UTI and treatment plan.",
+      "Discussed medication instructions for Amoxicillin.",
+      "Counseling given on lifestyle changes for hypertension.",
+      "Explained signs and symptoms of worsening condition and when to seek earlier return."
+    ],
+    "example_phrases_ms": [
+      "Pendidikan pesakit diberikan mengenai diagnosis UTI dan pelan rawatan.",
+      "Dibincangkan arahan pengambilan ubat Amoxicillin.",
+      "Kaunseling diberikan mengenai perubahan gaya hidup untuk hipertensi.",
+      "Dijelaskan tanda dan gejala keadaan yang semakin teruk dan bila perlu kembali lebih awal."
+    ],
+    "gemini_instructions": "Summarize the education provided to the patient regarding their diagnosis, treatment plan, medications, or lifestyle changes. Note the topics discussed.",
+    "notes_for_scribe": "Briefly outline the key information and instructions provided to the patient."
+  },
+  {
+    "id": "PN005",
+    "category": "Follow-Up Instructions",
+    "keywords": ["follow-up", "susulan", "return in", "kembali dalam", "weeks", "minggu", "days", "hari", "schedule follow-up for", "jadualkan susulan untuk", "if symptoms worsen", "jika gejala bertambah teruk", "return earlier if", "kembali lebih awal jika", "PRN follow-up", "susulan PRN", "as needed", "jika perlu"],
+    "example_phrases_en": [
+      "Follow-up in 2 weeks.",
+      "Return in 1 week if symptoms persist.",
+      "Schedule follow-up for 1 month.",
+      "Return earlier if chest pain worsens or shortness of breath develops.",
+      "PRN follow-up as needed."
+    ],
+    "example_phrases_ms": [
+      "Susulan dalam 2 minggu.",
+      "Kembali dalam 1 minggu jika gejala berterusan.",
+      "Jadualkan susulan untuk 1 bulan.",
+      "Kembali lebih awal jika sakit dada bertambah teruk atau sesak nafas timbul.",
+      "Susulan PRN jika perlu."
+    ],
+    "gemini_instructions": "State when the patient should return for follow-up, including the timeframe (e.g., in days, weeks, months). Note any instructions for earlier return if symptoms worsen or if follow-up is as needed (PRN).",
+    "notes_for_scribe": "Clearly document the specific follow-up plan and any 'red flag' symptoms that would warrant an earlier return."
+  }
+]
