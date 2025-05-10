@@ -1,0 +1,6 @@
+Flask==2.2.5
+mysql-connector-python==8.0.33
+google-cloud-speech==2.19.0
+google-cloud-aiplatform==1.30.0
+functions-framework==3.2.0
+flask-cors==3.0.10
