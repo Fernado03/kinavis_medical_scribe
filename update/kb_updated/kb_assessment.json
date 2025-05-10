@@ -1,0 +1,42 @@
+[
+  {
+    "id": "AN001",
+    "category": "Diagnosis / Impression",
+    "keywords": ["diagnosis", "diagnosa", "impression", "kesimpulan", "pendapat", "penilaian", "DX", "Dx:", "diagnosis:", "impression:", "kesimpulan:", "pendapat:", "penilaian:", "diagnosis utama", "diagnosis sekunder", "diagnosa primer", "diagnosa sekunder", "most likely", "kemungkinan besar", "acute", "akut", "chronic", "kronik", "stable", "stabil", "unstable", "tidak stabil", "well-controlled", "terkawal", "poorly controlled", "tidak terkawal"],
+    "example_phrases_en": [
+      "Diagnosis: Uncomplicated urinary tract infection.",
+      "Impression: Viral upper respiratory tract infection.",
+      "Final diagnosis is community-acquired pneumonia.",
+      "Primary Diagnosis: Hypertension, well-controlled. Secondary Diagnosis: Type 2 Diabetes Mellitus.",
+      "Most likely diagnosis: Acute bronchitis."
+    ],
+    "example_phrases_ms": [
+      "Diagnosis: Jangkitan saluran kencing tidak berkomplikasi.",
+      "Impresi: Jangkitan virus pada saluran pernafasan atas.",
+      "Diagnosis akhir adalah pneumonia komuniti.",
+      "Diagnosis Utama: Hipertensi, terkawal. Diagnosis Sekunder: Diabetes Mellitus Jenis 2.",
+      "Kemungkinan besar diagnosis: Bronkitis akut."
+    ],
+    "gemini_instructions": "Extract the clinician's diagnosis or clinical impression based on the subjective and objective findings. Identify and separate primary and secondary diagnoses if listed. Note any qualifiers such as 'acute,' 'chronic,' 'stable,' 'well-controlled,' etc. Use precise medical terminology as stated in the note.",
+    "notes_for_scribe": "This section summarizes the confirmed or most likely medical condition(s). Ensure accurate transcription of medical terms and the distinction between primary and secondary diagnoses. Pay attention to any descriptors of the condition's status."
+  },
+  {
+    "id": "AN002",
+    "category": "Differential Diagnosis (DDx)",
+    "keywords": ["differential diagnosis", "DDx", "diagnosis pembezaan", "diagnosis berbeza", "kemungkinan diagnosis", "rule out", "R/O", "singkirkan", "pertimbangkan", "DDx:", "differential diagnosis:", "diagnosis pembezaan:", "diagnosis berbeza:", "kemungkinan:", "rule out:", "singkirkan:", "pertimbangkan:", "vs.", "lawan", "in order of likelihood", "mengikut kebarangkalian", "likely", "kemungkinan", "less likely", "kurang kemungkinan", "etiology", "etiologi", "due to", "disebabkan oleh", "based on", "berdasarkan"],
+    "example_phrases_en": [
+      "Differential diagnosis includes bacterial vs. viral pharyngitis.",
+      "DDx: 1. Acute coronary syndrome (based on chest pain), 2. Pericarditis, 3. Musculoskeletal chest pain (less likely).",
+      "Need to rule out appendicitis due to abdominal pain and fever.",
+      "Other possibilities considered were gastroenteritis and food poisoning."
+    ],
+    "example_phrases_ms": [
+      "Diagnosis pembezaan termasuk faringitis bakteria lawan virus.",
+      "DDx: 1. Sindrom koronari akut (berdasarkan sakit dada), 2. Perikarditis, 3. Sakit dada muskuloskeletal (kurang kemungkinan).",
+      "Perlu singkirkan apendisitis disebabkan oleh sakit perut dan demam.",
+      "Kemungkinan lain yang dipertimbangkan adalah gastroenteritis dan keracunan makanan."
+    ],
+    "gemini_instructions": "Extract the list of possible diagnoses considered by the clinician if a definitive diagnosis is not yet established. Note the order of likelihood if provided, the rationale for each, and any conditions being 'ruled out' or considered less likely. Identify the basis for the differential diagnoses (e.g., based on specific symptoms or signs).",
+    "notes_for_scribe": "This section reflects the clinician's thought process. Capture all listed differential diagnoses, their order of likelihood, the reasoning behind them, and any conditions being excluded."
+  }
+]
