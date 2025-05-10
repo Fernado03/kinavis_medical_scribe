@@ -12,7 +12,14 @@ def create_app(config_name=os.getenv('FLASK_CONFIG') or 'default'):
     app.config.from_object(config[config_name])
 
     # Load Whisper model on app startup
-    app.whisper_model = whisper.load_model(app.config.get('WHISPER_MODEL', 'base'))
+    try:
+        app.whisper_model = whisper.load_model(app.config.get('WHISPER_MODEL', 'base'))
+        app.logger.info(f"Whisper model '{app.config.get('WHISPER_MODEL', 'base')}' loaded successfully.")
+    except Exception as e:
+        app.logger.error(f"Error loading Whisper model: {e}")
+        # Optionally, you might want to handle this more severely,
+        # e.g., exiting the application if Whisper fails to load.
+        app.whisper_model = None # Ensure it's set to None in case of failure
 
     def get_db_connection():
         conn = mysql.connector.connect(
