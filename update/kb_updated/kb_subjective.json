@@ -19,7 +19,7 @@
       "Badan saya tak sihat."
     ],
     "gemini_instructions": "Record the patient's primary reason for seeking medical care. Understand and interpret common Malaysian slang and colloquialisms used to describe their main problem. Keep the statement brief and direct, ideally in the patient's own words. Enclose direct quotes in quotation marks.",
-    "notes_for_scribe": "Identify the most pressing issue from the patient's perspective, even if expressed informally. Be aware of regional variations in slang."
+    "notes_for_scribe": "Identify the most pressing issue from the patient's perspective, even if expressed informally. Be aware of Malaysian regional variations in slang."
   },
   {
     "id": "SN002",
@@ -108,7 +108,7 @@
     "category": "HPI - Timing",
     "keywords": ["timing", "waktu", "pattern", "when does it occur", "bila biasanya", "selalu", "kadang-kadang", "pagi petang malam", "ada masa-masa dia"],
     "example_phrases_en": ["Symptoms are worse at night.", "Occurs intermittently throughout the day.", "No specific pattern noted."],
-    "example_phrases_ms": ["Gejala lebih buruk pada malam hari.", "Terjadi sebentar-sebentar sepanjang hari.", "Tidak ada pola khusus yang tercatat.", "Biasanya sakitnya lepas makan.", "Selalu rasa letih di waktu petang.", "Kadang-kadang saja sakit kepala ni."],
+    "example_phrases_ms": ["Gejala lebih buruk pada malam hari.", "Terjadi sekejap-sekejap sepanjang hari.", "Tidak ada pola khusus yang tercatat.", "Biasanya sakitnya lepas makan.", "Selalu rasa letih di waktu petang.", "Kadang-kadang saja sakit kepala ni."],
     "gemini_instructions": "Describe any temporal pattern to the symptom (e.g., constant, intermittent, diurnal variation), interpreting informal time references in Malaysian slang.",
     "notes_for_scribe": "Note if there are specific times of day or situations when the symptom is more or less pronounced, using standard time references."
   },
