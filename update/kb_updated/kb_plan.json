@@ -2,7 +2,7 @@
   {
     "id": "PN001",
     "category": "Diagnostics / Tests Ordered",
-    "keywords": ["diagnostics", "tests ordered", "ujian yang diarahkan", "siasatan", "makmal", "radiologi", "scans", "x-ray", "blood test", "urine test", "ECG", "EKG", "ultrasound", "CT scan", "MRI", "ordered:", "dipesan:", "arahkan:", "due to", "disebabkan oleh", "for", "untuk", "to evaluate", "untuk menilai", "to assess", "untuk mengesan"],
+    "keywords": ["diagnostics", "tests ordered", "ujian yang diarahkan", "siasatan", "makmal", "radiologi", "scans", "x-ray", "blood test", "urine test", "ECG", "EKG", "ultrasound", "CT scan", "MRI", "ordered:", "dipesan:", "arahkan:", "due to", "disebabkan oleh", "for", "untuk", "to evaluate", "untuk menilai", "to assess", "untuk mengesan", "kena buat test", "suruh pergi lab", "nak tengok dalaman", "scan la"],
     "example_phrases_en": [
       "Diagnostics ordered: CBC, BMP, Urinalysis to rule out infection.",
       "Tests ordered: Chest X-ray to evaluate for pneumonia.",
@@ -13,15 +13,19 @@
       "Ujian yang diarahkan: FBC, U&E, Urinalisis untuk menyingkirkan jangkitan.",
       "Siasatan: X-ray dada untuk menilai pneumonia.",
       "MRI otak diarahkan disebabkan oleh sakit kepala yang berterusan.",
-      "Pesan ECG untuk mengesan keabnormalan jantung."
+      "Pesan ECG untuk mengesan keabnormalan jantung.",
+      "Kena buat test darah dan air kencing.",
+      "Suruh pergi lab ambil darah.",
+      "Nak tengok dalaman kena buat scan la.",
+      "Kena buat ECG jantung."
     ],
-    "gemini_instructions": "List all diagnostic tests ordered during this visit. Note the name of the test and the rationale behind ordering it, if provided. Identify the purpose of the test (e.g., rule out, evaluate, assess).",
-    "notes_for_scribe": "Document the specific names of the tests and the clinical reasoning provided by the clinician for ordering them."
+    "gemini_instructions": "List all diagnostic tests ordered during this visit. Note the name of the test and the rationale behind ordering it, if provided. Identify the purpose of the test (e.g., rule out, evaluate, assess). Understand and interpret Malaysian slang and informal language used to describe ordered tests.",
+    "notes_for_scribe": "Document the specific names of the tests and the clinical reasoning provided by the clinician, even if expressed informally. Translate informal terms to standard medical terminology."
   },
   {
     "id": "PN002",
     "category": "Medications / Therapy",
-    "keywords": ["medications", "therapy", "ubat-ubatan", "terapi", "prescribed", "diresepkan", "new medication", "ubat baru", "increase dose", "tambah dos", "decrease dose", "kurang dos", "continue medication", "teruskan ubat", "discontinue medication", "berhenti ubat", "initiated", "dimulakan", "start", "mulakan", "PO", "IV", "IM", "SC", "topical", "oral", "intravenous", "intramuscular", "subcutaneous", "sapuan", "oral", "intravena", "intramuskular", "subkutaneus", "sapu"],
+    "keywords": ["medications", "therapy", "ubat-ubatan", "terapi", "prescribed", "diresepkan", "new medication", "ubat baru", "increase dose", "tambah dos", "decrease dose", "kurang dos", "continue medication", "teruskan ubat", "discontinue medication", "berhenti ubat", "initiated", "dimulakan", "start", "mulakan", "PO", "IV", "IM", "SC", "topical", "oral", "intravenous", "intramuscular", "subcutaneous", "sapuan", "oral", "intravena", "intramuskular", "subkutaneus", "sapu", "bagi ubat", "makan ubat", "sapu krim", "injection", "kena fisioterapi", "ubat naik dos", "ubat turun dos", "tak payah makan ubat ni lagi"],
     "example_phrases_en": [
       "Medications: Prescribed Amoxicillin 500mg PO TID for 7 days.",
       "Increase Lisinopril dose to 20mg daily.",
@@ -34,15 +38,23 @@
       "Tambah dos Lisinopril menjadi 20mg setiap hari.",
       "Berhenti mengambil Metformin.",
       "Terapi: Dimulakan sesi fisioterapi 3 kali seminggu.",
-      "Teruskan ubat-ubatan seperti yang diresepkan."
+      "Teruskan ubat-ubatan seperti yang diresepkan.",
+      "Kena bagi ubat antibiotik ni.",
+      "Makan ubat demam tiga kali sehari.",
+      "Kena sapu krim kat ruam ni.",
+      "Kena injection tahan sakit.",
+      "Mulai kena pergi fisioterapi.",
+      "Ubat darah tinggi kena naikkan dos.",
+      "Ubat kencing manis kena kurangkan sikit.",
+      "Tak payah makan lagi ubat batuk tu."
     ],
-    "gemini_instructions": "Document all medications prescribed, changes made to existing medications (increase, decrease, discontinue), and any therapies initiated. Include the medication name, dose, route, and frequency/duration if specified. Note if a medication is new or if existing ones are continued or stopped.",
-    "notes_for_scribe": "Record the precise details of all medication orders and therapy plans, including any changes to previous regimens."
+    "gemini_instructions": "Document all medications prescribed, changes made to existing medications (increase, decrease, discontinue), and any therapies initiated. Include the medication name, dose, route, and frequency/duration if specified. Note if a medication is new or if existing ones are continued or stopped. Understand and interpret Malaysian slang and informal language used to describe medications and therapies.",
+    "notes_for_scribe": "Record the precise details of all medication orders and therapy plans, including any changes to previous regimens, even if described informally. Translate informal terms to standard medical abbreviations and terminology."
   },
   {
     "id": "PN003",
     "category": "Referrals / Consults",
-    "keywords": ["referrals", "consults", "rujukan", "konsultasi", "referred to", "dirujuk kepada", "consulted", "dikonsultasi dengan", "specialist", "pakar", "cardiology", "kardiologi", "dermatology", "dermatologi", "neurology", "neurologi", "surgery", "pembedahan", "orthopedics", "ortopedik", "request consult with", "mohon konsultasi dengan"],
+    "keywords": ["referrals", "consults", "rujukan", "konsultasi", "referred to", "dirujuk kepada", "consulted", "dikonsultasi dengan", "specialist", "pakar", "cardiology", "kardiologi", "dermatology", "dermatologi", "neurology", "neurologi", "surgery", "pembedahan", "orthopedics", "ortopedik", "request consult with", "mohon konsultasi dengan", "jumpa pakar", "kena rujuk", "tanya pendapat pakar", "suruh jumpa specialist"],
     "example_phrases_en": [
       "Referral to Cardiology for further evaluation of chest pain.",
       "Consulted Neurology regarding persistent headaches.",
@@ -53,15 +65,19 @@
       "Rujukan kepada Kardiologi untuk penilaian lanjut sakit dada.",
       "Konsultasi dengan Neurologi mengenai sakit kepala yang berterusan.",
       "Dirujuk kepada Ortopedik untuk sakit lutut.",
-      "Mohon konsultasi dengan Pakar Penyakit Berjangkit."
+      "Mohon konsultasi dengan Pakar Penyakit Berjangkit.",
+      "Kena jumpa pakar jantung pasal sakit dada ni.",
+      "Nak kena rujuk ke pakar kulit pasal ruam ni.",
+      "Kena tanya pendapat pakar saraf pasal sakit kepala ni.",
+      "Suruh jumpa specialist tulang."
     ],
-    "gemini_instructions": "Document any specialist referrals or consultations requested by the provider. Note the specialty being referred to or consulted with and the reason for the referral/consultation, if stated.",
-    "notes_for_scribe": "Record the specific specialty and the reason for the referral or consultation request."
+    "gemini_instructions": "Document any specialist referrals or consultations requested by the provider. Note the specialty being referred to or consulted with and the reason for the referral/consultation, if stated. Understand and interpret Malaysian slang and informal language used to describe referrals and consults.",
+    "notes_for_scribe": "Record the specific specialty and the reason for the referral or consultation request, even if mentioned informally. Use standard specialty names in the documentation."
   },
   {
     "id": "PN004",
     "category": "Patient Education & Counseling",
-    "keywords": ["patient education", "counseling", "pendidikan pesakit", "kaunseling", "explained", "dijelaskan", "discussed", "dibincangkan", "regarding", "mengenai", "about", "tentang", "signs and symptoms", "tanda dan gejala", "treatment plan", "pelan rawatan", "medication instructions", "arahan ubat", "lifestyle changes", "perubahan gaya hidup", "diet", "pemakanan", "exercise", "senaman", "follow-up", "susulan", "self-care", "penjagaan diri"],
+    "keywords": ["patient education", "counseling", "pendidikan pesakit", "kaunseling", "explained", "dijelaskan", "discussed", "dibincangkan", "regarding", "mengenai", "about", "tentang", "signs and symptoms", "tanda dan gejala", "treatment plan", "pelan rawatan", "medication instructions", "arahan ubat", "lifestyle changes", "perubahan gaya hidup", "diet", "pemakanan", "exercise", "senaman", "follow-up", "susulan", "self-care", "penjagaan diri", "bagi tahu pasal", "cakap pasal", "terangkan pasal", "macam mana nak jaga diri", "apa tanda-tanda bahaya"],
     "example_phrases_en": [
       "Patient education provided regarding diagnosis of UTI and treatment plan.",
       "Discussed medication instructions for Amoxicillin.",
@@ -72,15 +88,19 @@
       "Pendidikan pesakit diberikan mengenai diagnosis UTI dan pelan rawatan.",
       "Dibincangkan arahan pengambilan ubat Amoxicillin.",
       "Kaunseling diberikan mengenai perubahan gaya hidup untuk hipertensi.",
-      "Dijelaskan tanda dan gejala keadaan yang semakin teruk dan bila perlu kembali lebih awal."
+      "Dijelaskan tanda dan gejala keadaan yang semakin teruk dan bila perlu kembali lebih awal.",
+      "Doktor bagi tahu pasal penyakit kencing kotor dan cara rawatannya.",
+      "Ada cakap pasal cara makan ubat ni.",
+      "Terangkan pasal kena ubah cara hidup untuk darah tinggi.",
+      "Bagi tahu apa tanda-tanda bahaya kalau sakit ni makin teruk."
     ],
-    "gemini_instructions": "Summarize the education provided to the patient regarding their diagnosis, treatment plan, medications, or lifestyle changes. Note the topics discussed.",
-    "notes_for_scribe": "Briefly outline the key information and instructions provided to the patient."
+    "gemini_instructions": "Summarize the education provided to the patient regarding their diagnosis, treatment plan, medications, or lifestyle changes. Note the topics discussed. Understand and interpret Malaysian slang and informal language used to describe patient education and counseling.",
+    "notes_for_scribe": "Briefly outline the key information and instructions provided to the patient, even if communicated informally. Use clear and concise language in the documentation."
   },
   {
     "id": "PN005",
     "category": "Follow-Up Instructions",
-    "keywords": ["follow-up", "susulan", "return in", "kembali dalam", "weeks", "minggu", "days", "hari", "schedule follow-up for", "jadualkan susulan untuk", "if symptoms worsen", "jika gejala bertambah teruk", "return earlier if", "kembali lebih awal jika", "PRN follow-up", "susulan PRN", "as needed", "jika perlu"],
+    "keywords": ["follow-up", "susulan", "return in", "kembali dalam", "weeks", "minggu", "days", "hari", "schedule follow-up for", "jadualkan susulan untuk", "if symptoms worsen", "jika gejala bertambah teruk", "return earlier if", "kembali lebih awal jika", "PRN follow-up", "susulan PRN", "as needed", "jika perlu", "jumpa lagi", "datang balik", "kalau tak ok datang cepat", "ikut suka kalau nak datang"],
     "example_phrases_en": [
       "Follow-up in 2 weeks.",
       "Return in 1 week if symptoms persist.",
@@ -93,9 +113,13 @@
       "Kembali dalam 1 minggu jika gejala berterusan.",
       "Jadualkan susulan untuk 1 bulan.",
       "Kembali lebih awal jika sakit dada bertambah teruk atau sesak nafas timbul.",
-      "Susulan PRN jika perlu."
+      "Susulan PRN jika perlu.",
+      "Nanti jumpa lagi dua minggu.",
+      "Kalau rasa tak ok, datang balik cepat ya.",
+      "Kena datang balik jumpa doktor bulan depan.",
+      "Kalau ikut suka, bila-bila pun boleh datang."
     ],
-    "gemini_instructions": "State when the patient should return for follow-up, including the timeframe (e.g., in days, weeks, months). Note any instructions for earlier return if symptoms worsen or if follow-up is as needed (PRN).",
-    "notes_for_scribe": "Clearly document the specific follow-up plan and any 'red flag' symptoms that would warrant an earlier return."
+    "gemini_instructions": "State when the patient should return for follow-up, including the timeframe (e.g., in days, weeks, months). Note any instructions for earlier return if symptoms worsen or if follow-up is as needed (PRN). Understand and interpret Malaysian slang and informal language used to describe follow-up instructions.",
+    "notes_for_scribe": "Clearly document the specific follow-up plan and any 'red flag' symptoms that would warrant an earlier return, even if communicated informally. Use standard timeframes in the documentation."
   }
 ]
