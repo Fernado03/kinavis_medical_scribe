@@ -1,87 +1,154 @@
 [
   {
-    "id": "A001",
-    "category": "Problem List",
-    "keywords": ["problem list", "senarai masalah", "active issues", "chronic conditions"],
+    "id": "SN001",
+    "category": "Chief Complaint",
+    "keywords": ["chief complaint", "CC", "keluhan utama", "main problem", "reason for visit"],
     "example_phrases_en": [
-      "Problem #1: Hypertension, well-controlled.",
-      "Problem #2: Type 2 Diabetes Mellitus, on Metformin.",
-      "Problem #3: Acute pharyngitis."
+      "Chief Complaint: Chest pain for two days.",
+      "CC: Sore throat and cough.",
+      "Patient states: 'I feel very tired all the time.'"
     ],
     "example_phrases_ms": [
-      "Masalah #1: Hipertensi, terkawal.",
-      "Masalah #2: Diabetes Mellitus Jenis 2, mengambil Metformin.",
-      "Masalah #3: Faringitis akut."
+      "Keluhan Utama: Sakit dada selama dua hari.",
+      "KU: Sakit tekak dan batuk.",
+      "Pesakit menyatakan: 'Saya rasa sangat letih sepanjang masa.'"
     ],
-    "gemini_instructions": "List each problem identified by the clinician, numbered if possible. Note if the problem is acute or chronic, and its current status (e.g., controlled, uncontrolled, improving).",
-    "notes_for_scribe": "This is a summary of the patient's active medical issues. It may include both new and pre-existing conditions."
+    "gemini_instructions": "Record the patient's primary reason for seeking medical care in their own words if possible. Keep it brief and direct.",
+    "notes_for_scribe": "This is the most pressing issue from the patient's perspective. Enclose direct quotes in quotation marks."
   },
   {
-    "id": "A002",
-    "category": "Diagnosis",
-    "keywords": ["diagnosis", "diagnosa", "impression", "assessment"],
+    "id": "SN002",
+    "category": "History of Present Illness",
+    "keywords": ["history of present illness", "HPI", "riwayat penyakit sekarang", "kronologi keluhan", "OLDCARTS"],
     "example_phrases_en": [
-      "Assessment: Uncomplicated urinary tract infection.",
-      "Impression: Viral upper respiratory tract infection.",
-      "Final diagnosis is community-acquired pneumonia."
+      "HPI: 65-year-old male presenting with two days of chest pain...",
+      "The patient is a 32-year-old female with a one-week history of cough...",
+      "Onset was sudden yesterday morning..."
     ],
     "example_phrases_ms": [
-      "Penilaian: Jangkitan saluran kencing tidak berkomplikasi.",
-      "Impresi: Jangkitan saluran pernafasan atas disebabkan virus.",
-      "Diagnosa akhir adalah radang paru-paru komuniti."
+      "RPS: Lelaki berusia 65 tahun datang dengan sakit dada selama dua hari...",
+      "Pesakit adalah wanita berusia 32 tahun dengan riwayat batuk selama seminggu...",
+      "Awalnya terjadi tiba-tiba pagi kemarin..."
     ],
-    "gemini_instructions": "State the clinician's primary diagnosis or clinical impression for the current encounter. Use precise medical terminology.",
-    "notes_for_scribe": "This is the clinician's conclusion based on the subjective and objective findings. There might be multiple diagnoses."
+    "gemini_instructions": "Provide a chronological account of the chief complaint using the OLDCARTS framework (Onset, Location, Duration, Character, Aggravating/Alleviating Factors, Radiation, Timing, Severity). Include the patient's age, sex, and reason for the visit at the beginning.",
+    "notes_for_scribe": "Be detailed and systematic. Use the OLDCARTS structure to ensure all relevant aspects of the present illness are covered."
   },
   {
-    "id": "A003",
-    "category": "Differential Diagnosis",
-    "keywords": ["differential diagnosis", "diagnosa pembezaan", "DDx", "rule out", "pertimbangkan"],
-    "example_phrases_en": [
-      "Differential diagnosis includes bacterial vs. viral pharyngitis.",
-      "Need to rule out acute coronary syndrome.",
-      "Other possibilities considered were gastroenteritis and appendicitis."
-    ],
-    "example_phrases_ms": [
-      "Diagnosa pembezaan termasuk faringitis bakteria lawan virus.",
-      "Perlu menolak sindrom koronari akut.",
-      "Kemungkinan lain yang dipertimbangkan adalah gastroenteritis dan apendisitis."
-    ],
-    "gemini_instructions": "List any alternative diagnoses the clinician is considering. Note if specific conditions are being 'ruled out'.",
-    "notes_for_scribe": "DDx reflects the clinician's thought process in arriving at the primary diagnosis. It's important to capture these considerations."
+    "id": "SN002_1",
+    "category": "HPI - Onset",
+    "keywords": ["onset", "bila bermula", "when did it start", "initial occurrence"],
+    "example_phrases_en": ["Symptoms began two days ago.", "Started suddenly this morning.", "Gradual onset over the past week."],
+    "example_phrases_ms": ["Gejala bermula dua hari lalu.", "Mulai tiba-tiba pagi ini.", "Awalnya bertahap selama seminggu terakhir."],
+    "gemini_instructions": "Document when the symptoms first started.",
+    "notes_for_scribe": "Note the specific time frame or event associated with the start of the symptoms."
   },
   {
-    "id": "A004",
-    "category": "Rationale for Diagnosis",
-    "keywords": ["rationale", "justifikasi", "based on", "consistent with", "due to"],
-    "example_phrases_en": [
-      "Diagnosis of asthma exacerbation is based on wheezing and history of asthma.",
-      "Findings are consistent with acute otitis media given ear pain and bulging tympanic membrane.",
-      "Likely viral etiology due to absence of fever and purulent discharge."
-    ],
-    "example_phrases_ms": [
-      "Diagnosis serangan asma adalah berdasarkan bunyi berdehit dan sejarah asma.",
-      "Penemuan selaras dengan otitis media akut memandangkan sakit telinga dan gegendang telinga yang membengkak.",
-      "Kemungkinan etiologi virus disebabkan ketiadaan demam dan lelehan bernanah."
-    ],
-    "gemini_instructions": "Explain the clinician's reasoning for the primary diagnosis, linking it to specific subjective complaints, objective findings, or lab/imaging results.",
-    "notes_for_scribe": "This section justifies the diagnosis. Capture the key evidence supporting the clinician's conclusion."
+    "id": "SN002_2",
+    "category": "HPI - Location",
+    "keywords": ["location", "lokasi", "where is it", "area of symptom"],
+    "example_phrases_en": ["Pain is located in the center of the chest.", "Soreness is primarily in the throat.", "Headache is behind the eyes."],
+    "example_phrases_ms": ["Sakit terletak di tengah dada.", "Nyeri terutama di tenggorokan.", "Sakit kepala di belakang mata."],
+    "gemini_instructions": "Specify the exact location(s) where the symptom is felt.",
+    "notes_for_scribe": "Be precise in describing the anatomical location."
   },
   {
-    "id": "A005",
-    "category": "Prognosis",
-    "keywords": ["prognosis", "ramalan", "outlook", "expectation"],
-    "example_phrases_en": [
-      "Prognosis is good with treatment adherence.",
-      "Patient is expected to make a full recovery within 7-10 days.",
-      "Condition is chronic, but manageable with lifestyle changes and medication."
-    ],
-    "example_phrases_ms": [
-      "Prognosis baik dengan kepatuhan rawatan.",
-      "Pesakit dijangka pulih sepenuhnya dalam masa 7-10 hari.",
-      "Keadaan ini kronik, tetapi boleh diuruskan dengan perubahan gaya hidup dan ubat-ubatan."
-    ],
-    "gemini_instructions": "Describe the clinician's outlook on the patient's condition and expected course of illness or recovery. Note any factors influencing the prognosis.",
-    "notes_for_scribe": "Prognosis can be short-term or long-term. Capture any specific timelines or conditions mentioned."
+    "id": "SN002_3",
+    "category": "HPI - Duration",
+    "keywords": ["duration", "berapa lama", "how long", "persistence of symptom"],
+    "example_phrases_en": ["Symptoms have lasted for two days.", "The pain comes and goes.", "Has been feeling this way for about a week."],
+    "example_phrases_ms": ["Gejala sudah berlangsung selama dua hari.", "Sakitnya datang dan pergi.", "Sudah merasa seperti ini selama sekitar seminggu."],
+    "gemini_instructions": "Indicate how long the symptom has been present.",
+    "notes_for_scribe": "Note if the symptom is constant, intermittent, or fluctuating."
+  },
+  {
+    "id": "SN002_4",
+    "category": "HPI - Character",
+    "keywords": ["character", "sifat", "description", "how does it feel"],
+    "example_phrases_en": ["The pain is sharp and stabbing.", "Feels like a dull ache.", "The cough is dry and hacking."],
+    "example_phrases_ms": ["Sakitnya tajam dan menusuk.", "Terasa seperti nyeri tumpul.", "Batuknya kering dan terus-menerus."],
+    "gemini_instructions": "Describe the nature or quality of the symptom using descriptive words.",
+    "notes_for_scribe": "Use the patient's own words if possible to capture the character accurately."
+  },
+  {
+    "id": "SN002_5",
+    "category": "HPI - Aggravating/Alleviating Factors",
+    "keywords": ["aggravating factors", "alleviating factors", "memperburuk", "meringankan", "what makes it worse", "what makes it better"],
+    "example_phrases_en": ["Pain is worse with exertion.", "Rest seems to make it better.", "Eating spicy food aggravates the heartburn."],
+    "example_phrases_ms": ["Sakit bertambah buruk dengan aktivitas fisik.", "Istirahat sepertinya membuatnya lebih baik.", "Makan makanan pedas memperparah sakit maag."],
+    "gemini_instructions": "Note any factors that worsen or improve the symptom.",
+    "notes_for_scribe": "Include specific activities, medications, or positions that affect the symptom."
+  },
+  {
+    "id": "SN002_6",
+    "category": "HPI - Radiation",
+    "keywords": ["radiation", "menjalar", "spreads to", "does it go anywhere else"],
+    "example_phrases_en": ["The pain radiates down his left arm.", "Soreness does not spread anywhere.", "Headache radiates to the neck."],
+    "example_phrases_ms": ["Sakitnya menjalar ke lengan kiri.", "Nyeri tidak menyebar ke mana pun.", "Sakit kepala menjalar ke leher."],
+    "gemini_instructions": "Document if the symptom spreads to other parts of the body.",
+    "notes_for_scribe": "Specify the direction and extent of any radiation."
+  },
+  {
+    "id": "SN002_7",
+    "category": "HPI - Timing",
+    "keywords": ["timing", "waktu", "pattern", "when does it occur"],
+    "example_phrases_en": ["Symptoms are worse at night.", "Occurs intermittently throughout the day.", "No specific pattern noted."],
+    "example_phrases_ms": ["Gejala lebih buruk pada malam hari.", "Terjadi sebentar-sebentar sepanjang hari.", "Tidak ada pola khusus yang tercatat."],
+    "gemini_instructions": "Describe any temporal pattern to the symptom (e.g., constant, intermittent, diurnal variation).",
+    "notes_for_scribe": "Note if there are specific times of day or situations when the symptom is more or less pronounced."
+  },
+  {
+    "id": "SN002_8",
+    "category": "HPI - Severity",
+    "keywords": ["severity", "keparahan", "pain scale", "how bad is it"],
+    "example_phrases_en": ["Pain is rated as a 7/10.", "Severity is mild and tolerable.", "Patient reports the worst pain of their life (10/10)."],
+    "example_phrases_ms": ["Sakit dinilai 7/10.", "Keparahan ringan dan dapat ditoleransi.", "Pesakit melaporkan sakit terburuk dalam hidupnya (10/10)."],
+    "gemini_instructions": "Record the intensity of the symptom, often using a pain scale of 1 to 10.",
+    "notes_for_scribe": "Document the specific number given by the patient or a descriptive term if a numerical rating isn't provided."
+  },
+  {
+    "id": "SN003",
+    "category": "Relevant History",
+    "keywords": ["relevant history", "riwayat relevan", "PMH", "PSH", "FamHx", "SocHx", "past medical history", "past surgical history", "family history", "social history"],
+    "example_phrases_en": ["PMH: Hypertension, Diabetes.", "PSH: Appendectomy at age 10.", "FamHx: Father with heart disease.", "SocHx: Smokes 1 pack per day."],
+    "example_phrases_ms": ["RML: Hipertensi, Diabetes.", "RBH: Apendektomi pada usia 10 tahun.", "RKK: Ayah dengan penyakit jantung.", "RSK: Merokok 1 bungkus sehari."],
+    "gemini_instructions": "Document any pertinent past medical history, past surgical history, family history, and social history.",
+    "notes_for_scribe": "Focus on conditions and events relevant to the chief complaint or overall health. Use abbreviations like PMH, PSH, FamHx, SocHx."
+  },
+  {
+    "id": "SN003_1",
+    "category": "Social History",
+    "keywords": ["social history", "SocHx", "riwayat sosial", "HEADSS", "home", "education", "employment", "eating", "activities", "drugs", "sexuality", "suicide", "depression"],
+    "example_phrases_en": ["SocHx: Lives at home with spouse. Works as a teacher. Denies drug use. Reports feeling down lately."],
+    "example_phrases_ms": ["RSK: Tinggal di rumah bersama pasangan. Bekerja sebagai guru. Menyangkal penggunaan narkoba. Melaporkan merasa murung akhir-akhir ini."],
+    "gemini_instructions": "Document relevant aspects of the patient's social history, considering the HEADSS mnemonic (Home, Education/Employment/Eating, Activities, Drugs, Sexuality, Suicide/Depression).",
+    "notes_for_scribe": "Be sensitive and thorough when inquiring about social factors that may impact health."
+  },
+  {
+    "id": "SN004",
+    "category": "Review of Systems",
+    "keywords": ["review of systems", "ROS", "tinjauan sistem", "additional symptoms", "pertinent positives", "pertinent negatives"],
+    "example_phrases_en": ["ROS: Negative for fever, chills, nausea, vomiting.", "Reports fatigue and occasional night sweats (positive for general symptoms).", "Cardiovascular: Denies chest pain or palpitations."],
+    "example_phrases_ms": ["ROS: Negatif untuk demam, menggigil, mual, muntah.", "Melaporkan kelelahan dan kadang-kadang berkeringat di malam hari (positif untuk gejala umum).", "Kardiovaskular: Menyangkal sakit dada atau palpitasi."],
+    "gemini_instructions": "Document a system-by-system review of any additional symptoms reported by the patient. Note both pertinent positives (symptoms present) and pertinent negatives (symptoms absent).",
+    "notes_for_scribe": "Systematically go through each major body system (General, Cardiovascular, Respiratory, etc.)."
+  },
+  {
+    "id": "SN005",
+    "category": "Current Medications",
+    "keywords": ["current medications", "meds", "obat-obatan saat ini", "prescription", "OTC", "over the counter"],
+    "example_phrases_en": ["Current Medications: Lisinopril 10mg PO daily.", "Takes Ibuprofen 200mg PRN for pain.", "Reports no current medications."],
+    "example_phrases_ms": ["Obat-obatan Saat Ini: Lisinopril 10mg PO setiap hari.", "Mengambil Ibuprofen 200mg PRN untuk nyeri.", "Melaporkan tidak ada obat-obatan saat ini."],
+    "gemini_instructions": "List all medications the patient is currently taking, including the name, dose, route (e.g., PO, IV), and frequency.",
+    "notes_for_scribe": "Include prescription medications, over-the-counter drugs, supplements, and herbal remedies."
+  },
+  {
+    "id": "SN006",
+    "category": "Allergies",
+    "keywords": ["allergies", "alergi", "reactions", "drug allergy", "food allergy", "environmental allergy"],
+    "example_phrases_en": ["Allergies: Penicillin – rash.", "No known drug allergies.", "Allergic to peanuts – anaphylaxis."],
+    "example_phrases_ms": ["Alergi: Penisilin – ruam.", "Tidak ada alergi obat yang diketahui.", "Alergi kacang – anafilaksis."],
+    "gemini_instructions": "List all known allergies and the specific reaction experienced by the patient. Include drug, food, and environmental allergies.",
+    "notes_for_scribe": "Be specific about the allergen and the type of reaction (e.g., rash, hives, anaphylaxis)."
   }
 ]
+  
