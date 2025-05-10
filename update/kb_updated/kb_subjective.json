@@ -152,4 +152,18 @@
     "id": "SN005",
     "category": "Current Medications",
     "keywords": ["current medications", "meds", "obat-obatan saat ini", "prescription", "OTC", "over the counter", "ubat yang sekarang ambil", "ada makan ubat", "ubat dari doktor", "beli kat kedai"],
-    "example_phrases_
+    "example_phrases_"en": ["Current Medications: Lisinopril 10mg PO daily.", "Takes Ibuprofen 200mg PRN for pain.", "Reports no current medications."],
+    "example_phrases_ms": ["Obat-obatan Saat Ini: Lisinopril 10mg PO setiap hari.", "Mengambil Ibuprofen 200mg PRN untuk nyeri.", "Melaporkan tidak ada obat-obatan saat ini.", "Ubat apa yang encik/cik ambil sekarang?", "Ada makan ubat apa-apa?", "Ubat yang doktor bagi?", "Ada beli ubat kat kedai?"],
+    "gemini_instructions": "List all medications the patient is currently taking, including the name, dose, route (e.g., PO, IV), and frequency. Understand informal ways of asking about medication use in Malaysian slang.",
+    "notes_for_scribe": "Include prescription medications, over-the-counter drugs, supplements, and herbal remedies. Be precise about the details of each medication."
+  },
+  {
+    "id": "SN006",
+    "category": "Allergies",
+    "keywords": ["allergies", "alergi", "reactions", "drug allergy", "food allergy", "environmental allergy", "ada alahan", "alahan apa", "tak boleh makan apa", "sensitif dengan apa"],
+    "example_phrases_en": ["Allergies: Penicillin – rash.", "No known drug allergies.", "Allergic to peanuts – anaphylaxis."],
+    "example_phrases_ms": ["Alergi: Penisilin – ruam.", "Tidak ada alergi obat yang diketahui.", "Alergi kacang – anafilaksis.", "Encik/cik ada alahan apa-apa?", "Alahan dengan ubat apa?", "Tak boleh makan makanan laut?", "Sensitif dengan habuk?"],
+    "gemini_instructions": "List all known allergies and the specific reaction experienced by the patient. Include drug, food, and environmental allergies. Understand informal ways of asking about allergies in Malaysian slang.",
+    "notes_for_scribe": "Be specific about the allergen and the type of reaction (e.g., rash, hives, anaphylaxis). If no allergies, explicitly state 'No known allergies'."
+  }
+]
