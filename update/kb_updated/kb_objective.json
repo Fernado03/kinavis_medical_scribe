@@ -1,40 +1,126 @@
 [
   {
-    "id": "AN001",
-    "category": "Diagnosis / Impression",
-    "keywords": ["diagnosis", "diagnosa", "impression", "kesimpulan", "pendapat", "penilaian", "DX", "Dx:", "diagnosis:", "impression:", "kesimpulan:", "pendapat:", "penilaian:", "diagnosis utama", "diagnosis sekunder", "diagnosa primer", "diagnosa sekunder"],
+    "id": "OB001",
+    "category": "Vital Signs",
+    "keywords": ["vital signs", "tanda vital", "VS", "VS:", "suhu", "temperature", "temp", "nadi", "heart rate", "HR", "tekanan darah", "blood pressure", "BP", "pernafasan", "respiratory rate", "RR", "saturasi oksigen", "oxygen saturation", "SpO2", "berat", "weight", "wt", "tinggi", "height", "ht", "BMI", "body mass index", "indeks jisim badan"],
     "example_phrases_en": [
-      "Diagnosis: Uncomplicated urinary tract infection.",
-      "Impression: Viral upper respiratory tract infection.",
-      "Final diagnosis is community-acquired pneumonia.",
-      "Primary Diagnosis: Hypertension, well-controlled. Secondary Diagnosis: Type 2 Diabetes Mellitus."
+      "Vital Signs: Temp 98.6°F, HR 72 bpm, BP 120/80 mmHg, RR 16, SpO2 98%, Wt 70 kg, Ht 170 cm, BMI 24.2.",
+      "VS: T 37°C, PR 78, BP 118/76, RR 18, O2 sat 97%.",
+      "Temperature: 99.1 F. Heart Rate: 88."
     ],
     "example_phrases_ms": [
-      "Diagnosis: Jangkitan saluran kencing tidak berkomplikasi.",
-      "Impresi: Jangkitan virus pada saluran pernafasan atas.",
-      "Diagnosis akhir adalah pneumonia komuniti.",
-      "Diagnosis Utama: Hipertensi, terkawal. Diagnosis Sekunder: Diabetes Mellitus Jenis 2."
+      "Tanda Vital: Suhu 37°C, Nadi 72 bpm, TD 120/80 mmHg, Pernafasan 16, SpO2 98%, Berat 70 kg, Tinggi 170 cm, BMI 24.2.",
+      "VS: Suhu 37.5°C, HR 80, BP 115/75, RR 17, Oksigen 99%.",
+      "Suhu badan: 36.8 darjah Celsius. Kadar nadi: 75 per minit."
     ],
-    "gemini_instructions": "Extract the clinician's diagnosis or clinical impression based on the subjective and objective findings. Identify and separate primary and secondary diagnoses if listed. Use precise medical terminology as stated in the note.",
-    "notes_for_scribe": "This section summarizes the confirmed or most likely medical condition(s). Ensure accurate transcription of medical terms and the distinction between primary and secondary diagnoses."
+    "gemini_instructions": "Extract the patient's vital signs, including Temperature (in °F or °C), Heart Rate (in bpm), Blood Pressure (in mmHg), Respiratory Rate, Oxygen Saturation (in %), Weight (in kg), Height (in cm), and Body Mass Index (BMI). Note the units provided for each vital sign.",
+    "notes_for_scribe": "Ensure all documented vital signs are captured along with their respective units. Be aware of different abbreviations used for vital signs."
   },
   {
-    "id": "AN002",
-    "category": "Differential Diagnosis (DDx)",
-    "keywords": ["differential diagnosis", "DDx", "diagnosis pembezaan", "diagnosis berbeza", "kemungkinan diagnosis", "rule out", "R/O", "singkirkan", "pertimbangkan", "DDx:", "differential diagnosis:", "diagnosis pembezaan:", "diagnosis berbeza:", "kemungkinan:", "rule out:", "singkirkan:", "pertimbangkan:"],
+    "id": "OB002",
+    "category": "Physical Exam Findings",
+    "keywords": ["physical exam", "pe", "pemeriksaan fizikal", "general appearance", "keadaan umum", "HEENT", "kepala telinga hidung tekak", "head", "kepala", "eyes", "mata", "ears", "telinga", "nose", "hidung", "throat", "tekak", "neck", "leher", "cardiovascular", "kardiovaskular", "heart", "jantung", "respiratory", "pernafasan", "lungs", "paru-paru", "abdomen", "perut", "extremities", "anggota badan", "neurologic", "neurologi", "skin", "kulit", "psychiatric", "psikiatri", "findings", "penemuan", "noted", "dicatat", "revealed", "menunjukkan", "unremarkable", "tidak ada kelainan", "normal", "biasa", "abnormal", "tidak normal"],
     "example_phrases_en": [
-      "Differential diagnosis includes bacterial vs. viral pharyngitis.",
-      "DDx: 1. Acute coronary syndrome, 2. Pericarditis, 3. Musculoskeletal chest pain.",
-      "Need to rule out appendicitis.",
-      "Other possibilities considered were gastroenteritis and food poisoning."
+      "Physical Exam: General appearance: Well-appearing, no acute distress. HEENT: Normocephalic, atraumatic. Throat clear. Cardiovascular: Regular rate and rhythm, no murmurs. Respiratory: Clear to auscultation bilaterally. Abdomen: Soft, non-tender.",
+      "PE findings: Skin: Warm and dry. Neurologic: Alert and oriented x 3.",
+      "HEENT: Conjunctivae pink, sclerae anicteric. Neck: Supple, no lymphadenopathy."
     ],
     "example_phrases_ms": [
-      "Diagnosis pembezaan termasuk faringitis bakteria lawan virus.",
-      "DDx: 1. Sindrom koronari akut, 2. Perikarditis, 3. Sakit dada muskuloskeletal.",
-      "Perlu singkirkan apendisitis.",
-      "Kemungkinan lain yang dipertimbangkan adalah gastroenteritis dan keracunan makanan."
+      "Pemeriksaan Fizikal: Keadaan umum: Tampak baik, tiada distress akut. HEENT: Normocephalic, atraumatic. Tekak bersih. Kardiovaskular: Kadar dan ritma teratur, tiada murmur. Pernafasan: Bunyi nafas normal di kedua paru-paru. Abdomen: Lembut, tidak nyeri tekan.",
+      "Penemuan PE: Kulit: Hangat dan kering. Neurologi: Sedar dan orientasi baik x 3.",
+      "HEENT: Konjunktiva merah jambu, sklera tidak ikterik. Leher: Supple, tiada limfadenopati."
     ],
-    "gemini_instructions": "Extract the list of possible diagnoses considered by the clinician if a definitive diagnosis is not yet established. Note the order of likelihood if provided and any rationale or conditions being 'ruled out'.",
-    "notes_for_scribe": "This section reflects the clinician's thought process. Capture all listed differential diagnoses and any supporting reasons or exclusions mentioned."
+    "gemini_instructions": "Describe the findings observed by the provider during the physical exam, organized by body system (General appearance, HEENT, Neck, Cardiovascular, Respiratory, Abdomen, Extremities, Neurologic, Skin, and Psychiatric). Extract both normal and abnormal findings, noting any relevant descriptors.",
+    "notes_for_scribe": "Systematically document the findings for each body system examined. Use precise medical terminology and note the absence of abnormalities when stated (e.g., 'unremarkable,' 'no evidence of')."
+  },
+  {
+    "id": "OB002_1",
+    "category": "Physical Exam - General Appearance",
+    "keywords": ["general appearance", "keadaan umum", "well-appearing", "tampak baik", "ill-appearing", "tampak sakit", "alert", "sedar", "lethargic", "lesu", "no acute distress", "tiada distress akut", "NAD", "comfortable", "selesa", "anxious", "cemas"],
+    "example_phrases_en": ["General appearance: Well-appearing, no acute distress.", "Patient appears tired and lethargic.", "General: Comfortable and alert."],
+    "example_phrases_ms": ["Keadaan umum: Tampak baik, tiada distress akut.", "Pesakit kelihatan letih dan lesu.", "Umum: Selesa dan sedar."],
+    "gemini_instructions": "Document the patient's overall appearance and level of distress or comfort.",
+    "notes_for_scribe": "Note the patient's general state and any signs of discomfort or distress."
+  },
+  {
+    "id": "OB002_2",
+    "category": "Physical Exam - HEENT",
+    "keywords": ["HEENT", "kepala telinga hidung tekak", "head", "kepala", "normocephalic", "normosefalik", "atraumatic", "atraumatik", "eyes", "mata", "conjunctivae", "konjunktiva", "pink", "merah jambu", "sclerae", "sklera", "anicteric", "tidak ikterik", "ears", "telinga", "TM", "tympanic membrane", "membran timpani", "clear", "bersih", "nose", "hidung", "nares patent", "nares paten", "throat", "tekak", "pharynx", "farinks", "clear", "bersih", "no exudates", "tiada eksudat"],
+    "example_phrases_en": ["HEENT: Normocephalic, atraumatic. Conjunctivae pink, sclerae anicteric. Throat clear, no exudates. TM clear bilaterally."],
+    "example_phrases_ms": ["HEENT: Normosefalik, atraumatik. Konjunktiva merah jambu, sklera tidak ikterik. Tekak bersih, tiada eksudat. Membran timpani bersih kedua-dua belah."],
+    "gemini_instructions": "Document findings related to the Head, Eyes, Ears, Nose, and Throat.",
+    "notes_for_scribe": "Record specific observations for each component of the HEENT exam."
+  },
+  {
+    "id": "OB002_3",
+    "category": "Physical Exam - Neck",
+    "keywords": ["neck", "leher", "supple", "supple", "no lymphadenopathy", "tiada limfadenopati", "thyroid", "tiroid", "non-tender", "tidak nyeri tekan", "no masses", "tiada benjolan"],
+    "example_phrases_en": ["Neck: Supple, no lymphadenopathy. Thyroid non-enlarged.", "Neck: No masses palpated."],
+    "example_phrases_ms": ["Leher: Supple, tiada limfadenopati. Tiroid tidak membesar.", "Leher: Tiada benjolan teraba."],
+    "gemini_instructions": "Document findings related to the neck, including lymph nodes and thyroid.",
+    "notes_for_scribe": "Note any tenderness, masses, or abnormalities of the neck."
+  },
+  {
+    "id": "OB002_4",
+    "category": "Physical Exam - Cardiovascular",
+    "keywords": ["cardiovascular", "kardiovaskular", "cv", "heart", "jantung", "regular rate and rhythm", "kadar dan ritma teratur", "RRR", "no murmurs", "tiada murmur", "no rubs", "tiada gosokan", "no gallops", "tiada gallop", "S1S2 normal", "S1S2 normal", "pulses", "nadi", "strong", "kuat", "equal", "sama"],
+    "example_phrases_en": ["Cardiovascular: Regular rate and rhythm, no murmurs.", "CV: S1S2 normal, pulses strong and equal bilaterally."],
+    "example_phrases_ms": ["Kardiovaskular: Kadar dan ritma teratur, tiada murmur.", "KV: S1S2 normal, nadi kuat dan sama kedua-dua belah."],
+    "gemini_instructions": "Document findings related to the cardiovascular system, including heart sounds and pulses.",
+    "notes_for_scribe": "Record the rate, rhythm, and any abnormal heart sounds or pulse characteristics."
+  },
+  {
+    "id": "OB002_5",
+    "category": "Physical Exam - Respiratory",
+    "keywords": ["respiratory", "pernafasan", "resp", "lungs", "paru-paru", "clear to auscultation bilaterally", "bunyi nafas normal kedua-dua belah", "CTA", "no wheezes", "tiada mengi", "no crackles", "tiada krepitasi", "no rhonchi", "tiada ronki", "breath sounds", "bunyi nafas", "equal", "sama"],
+    "example_phrases_en": ["Respiratory: Clear to auscultation bilaterally.", "Resp: Breath sounds equal and clear.", "Lungs: No wheezes or crackles noted."],
+    "example_phrases_ms": ["Pernafasan: Bunyi nafas normal kedua-dua belah.", "Resp: Bunyi nafas sama dan bersih.", "Paru-paru: Tiada mengi atau krepitasi dicatat."],
+    "gemini_instructions": "Document findings related to the respiratory system, including auscultation of breath sounds.",
+    "notes_for_scribe": "Note the quality and equality of breath sounds and any adventitious sounds."
+  },
+  {
+    "id": "OB002_6",
+    "category": "Physical Exam - Abdomen",
+    "keywords": ["abdomen", "perut", "soft", "lembut", "non-tender", "tidak nyeri tekan", "ntnd", "bowel sounds", "bunyi usus", "normoactive", "normoaktif", "no organomegaly", "tiada organomegali", "no masses", "tiada benjolan", "distended", "distended"],
+    "example_phrases_en": ["Abdomen: Soft, non-tender, normoactive bowel sounds.", "Abd: No organomegaly or masses.", "Abdomen is distended."],
+    "example_phrases_ms": ["Abdomen: Lembut, tidak nyeri tekan, bunyi usus normoaktif.", "Abd: Tiada organomegali atau benjolan.", "Perut distended."],
+    "gemini_instructions": "Document findings related to the abdomen, including tenderness, bowel sounds, and organomegaly.",
+    "notes_for_scribe": "Record the abdominal exam findings, including palpation and auscultation results."
+  },
+  {
+    "id": "OB002_7",
+    "category": "Physical Exam - Extremities",
+    "keywords": ["extremities", "anggota badan", "ext", "warm", "hangat", "dry", "kering", "no edema", "tiada edema", "full ROM", "pergerakan penuh", "FROM", "pulses", "nadi", "capillary refill", "pengisian kapilari", "< 2 seconds", "kurang 2 saat", "no cyanosis", "tiada sianosis"],
+    "example_phrases_en": ["Extremities: Warm and dry, no edema. Full ROM noted.", "Ext: Pulses 2+ and equal bilaterally, cap refill < 2 seconds."],
+    "example_phrases_ms": ["Anggota badan: Hangat dan kering, tiada edema. Pergerakan penuh dicatat.", "Ext: Nadi 2+ dan sama kedua-dua belah, pengisian kapilari < 2 saat."],
+    "gemini_instructions": "Document findings related to the extremities, including skin condition, edema, range of motion, and pulses.",
+    "notes_for_scribe": "Record the condition of the skin, presence of edema, range of motion in major joints, and peripheral pulse characteristics."
+  },
+  {
+    "id": "OB002_8",
+    "category": "Physical Exam - Neurologic",
+    "keywords": ["neurologic", "neurologi", "neuro", "alert and oriented x 3", "sedar dan orientasi baik x 3", "A&Ox3", "cranial nerves II-XII intact", "saraf kranial II-XII utuh", "CN", "motor strength", "kekuatan motor", "sensory intact", "sensori utuh", "reflexes", "refleks", "DTRs", "deep tendon reflexes", "normal", "biasa"],
+    "example_phrases_en": ["Neurologic: Alert and oriented x 3. Cranial nerves II-XII intact. Motor strength 5/5 all extremities. Sensory intact.", "Neuro: DTRs 2+ throughout."],
+    "example_phrases_ms": ["Neurologi: Sedar dan orientasi baik x 3. Saraf kranial II-XII utuh. Kekuatan motor 5/5 semua anggota badan. Sensori utuh.", "Neuro: Refleks tendon dalam 2+ di semua bahagian."],
+    "gemini_instructions": "Document findings related to the neurologic exam, including mental status, cranial nerves, motor strength, sensation, and reflexes.",
+    "notes_for_scribe": "Record the key findings of the neurological assessment, noting any deficits or abnormalities."
+  },
+  {
+    "id": "OB002_9",
+    "category": "Physical Exam - Skin",
+    "keywords": ["skin", "kulit", "warm", "hangat", "dry", "kering", "moist", "lembab", "color", "warna", "pink", "merah jambu", "pale", "pucat", "jaundiced", "jaundis", "rashes", "ruam", "lesions", "lesi", "bruising", "lebam", "turgor", "turgor"],
+    "example_phrases_en": ["Skin: Warm and dry, no rashes or lesions noted. Skin turgor normal.", "Skin: Pale and cool to touch."],
+    "example_phrases_ms": ["Kulit: Hangat dan kering, tiada ruam atau lesi dicatat. Turgor kulit normal.", "Kulit: Pucat dan sejuk apabila disentuh."],
+    "gemini_instructions": "Document findings related to the skin, including temperature, moisture, color, and any lesions or rashes.",
+    "notes_for_scribe": "Record the appearance and condition of the patient's skin."
+  },
+  {
+    "id": "OB002_10",
+    "category": "Physical Exam - Psychiatric",
+    "keywords": ["psychiatric", "psikiatri", "mood", "mood", "affect", "afek", "behavior", "tingkah laku", "speech", "pertuturan", "thought process", "proses pemikiran", "oriented", "berorientasi", "cooperative", "kooperatif", "anxious", "cemas", "depressed", "murung"],
+    "example_phrases_en": ["Psychiatric: Mood euthymic, affect congruent. Behavior cooperative. Speech clear and coherent. Thought process organized.", "Psych: Patient reports feeling anxious."],
+    "example_phrases_ms": ["Psikiatri: Mood eutimik, afek kongruen. Tingkah laku kooperatif. Pertuturan jelas dan koheren. Proses pemikiran teratur.", "Psikiatri: Pesakit melaporkan merasa cemas."],
+    "gemini_instructions": "Document findings related to the psychiatric exam, including mood, affect, behavior, speech, and thought process.",
+    "notes_for_scribe": "Record observations about the patient's mental state and behavior during the examination."
   }
 ]
