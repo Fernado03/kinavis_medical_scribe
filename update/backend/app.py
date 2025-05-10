@@ -1,8 +1,9 @@
 import os
-from flask import Flask, jsonify, request, Blueprint
+from flask import Flask, jsonify, request
 import mysql.connector
 from .config import config
-import whisper  # Import the Whisper library
+from .api_routes import api_bp
+import whisper
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,15 +12,13 @@ def create_app(config_name=os.getenv('FLASK_CONFIG') or 'default'):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
 
-    # Load Whisper model on app startup
+    # Load Whisper model on app startup and attach it to the app context
     try:
         app.whisper_model = whisper.load_model(app.config.get('WHISPER_MODEL', 'base'))
         app.logger.info(f"Whisper model '{app.config.get('WHISPER_MODEL', 'base')}' loaded successfully.")
     except Exception as e:
         app.logger.error(f"Error loading Whisper model: {e}")
-        # Optionally, you might want to handle this more severely,
-        # e.g., exiting the application if Whisper fails to load.
-        app.whisper_model = None # Ensure it's set to None in case of failure
+        app.whisper_model = None
 
     def get_db_connection():
         conn = mysql.connector.connect(
@@ -30,13 +29,11 @@ def create_app(config_name=os.getenv('FLASK_CONFIG') or 'default'):
         )
         return conn
 
+    app.register_blueprint(api_bp, url_prefix='/api')
+
     @app.route('/')
     def hello_world():
         return 'Hello, World! AI Medical Scribe Backend is running.'
-
-    # Import and register the API blueprint
-    from .api_routes import api_bp
-    app.register_blueprint(api_bp, url_prefix='/api')
 
     @app.route('/test-db')
     def test_db_connection():
@@ -86,23 +83,6 @@ def create_app(config_name=os.getenv('FLASK_CONFIG') or 'default'):
         except Exception as e:
             messages.append(f"An unexpected error occurred: {str(e)}")
             return jsonify({"status": "error", "messages": messages}), 500
-
-    # Define the /api/transcribe-audio route here or in api_routes.py
-    @app.route('/api/transcribe-audio', methods=['POST'])
-    def transcribe_audio():
-        if 'audio' not in request.files:
-            return jsonify({"error": "No audio file provided"}), 400
-
-        audio_file = request.files['audio']
-        temp_audio_path = "temp_audio_" + audio_file.filename
-        try:
-            audio_file.save(temp_audio_path)
-            result = app.whisper_model.transcribe(temp_audio_path)
-            os.remove(temp_audio_path)
-            return jsonify({"transcription": result["text"]})
-        except Exception as e:
-            os.remove(temp_audio_path)
-            return jsonify({"error": str(e)}), 500
 
     return app
 
