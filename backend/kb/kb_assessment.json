@@ -1,0 +1,87 @@
+[
+  {
+    "id": "A001",
+    "category": "Problem List",
+    "keywords": ["problem list", "senarai masalah", "active issues", "chronic conditions"],
+    "example_phrases_en": [
+      "Problem #1: Hypertension, well-controlled.",
+      "Problem #2: Type 2 Diabetes Mellitus, on Metformin.",
+      "Problem #3: Acute pharyngitis."
+    ],
+    "example_phrases_ms": [
+      "Masalah #1: Hipertensi, terkawal.",
+      "Masalah #2: Diabetes Mellitus Jenis 2, mengambil Metformin.",
+      "Masalah #3: Faringitis akut."
+    ],
+    "gemini_instructions": "List each problem identified by the clinician, numbered if possible. Note if the problem is acute or chronic, and its current status (e.g., controlled, uncontrolled, improving).",
+    "notes_for_scribe": "This is a summary of the patient's active medical issues. It may include both new and pre-existing conditions."
+  },
+  {
+    "id": "A002",
+    "category": "Diagnosis",
+    "keywords": ["diagnosis", "diagnosa", "impression", "assessment"],
+    "example_phrases_en": [
+      "Assessment: Uncomplicated urinary tract infection.",
+      "Impression: Viral upper respiratory tract infection.",
+      "Final diagnosis is community-acquired pneumonia."
+    ],
+    "example_phrases_ms": [
+      "Penilaian: Jangkitan saluran kencing tidak berkomplikasi.",
+      "Impresi: Jangkitan saluran pernafasan atas disebabkan virus.",
+      "Diagnosa akhir adalah radang paru-paru komuniti."
+    ],
+    "gemini_instructions": "State the clinician's primary diagnosis or clinical impression for the current encounter. Use precise medical terminology.",
+    "notes_for_scribe": "This is the clinician's conclusion based on the subjective and objective findings. There might be multiple diagnoses."
+  },
+  {
+    "id": "A003",
+    "category": "Differential Diagnosis",
+    "keywords": ["differential diagnosis", "diagnosa pembezaan", "DDx", "rule out", "pertimbangkan"],
+    "example_phrases_en": [
+      "Differential diagnosis includes bacterial vs. viral pharyngitis.",
+      "Need to rule out acute coronary syndrome.",
+      "Other possibilities considered were gastroenteritis and appendicitis."
+    ],
+    "example_phrases_ms": [
+      "Diagnosa pembezaan termasuk faringitis bakteria lawan virus.",
+      "Perlu menolak sindrom koronari akut.",
+      "Kemungkinan lain yang dipertimbangkan adalah gastroenteritis dan apendisitis."
+    ],
+    "gemini_instructions": "List any alternative diagnoses the clinician is considering. Note if specific conditions are being 'ruled out'.",
+    "notes_for_scribe": "DDx reflects the clinician's thought process in arriving at the primary diagnosis. It's important to capture these considerations."
+  },
+  {
+    "id": "A004",
+    "category": "Rationale for Diagnosis",
+    "keywords": ["rationale", "justifikasi", "based on", "consistent with", "due to"],
+    "example_phrases_en": [
+      "Diagnosis of asthma exacerbation is based on wheezing and history of asthma.",
+      "Findings are consistent with acute otitis media given ear pain and bulging tympanic membrane.",
+      "Likely viral etiology due to absence of fever and purulent discharge."
+    ],
+    "example_phrases_ms": [
+      "Diagnosis serangan asma adalah berdasarkan bunyi berdehit dan sejarah asma.",
+      "Penemuan selaras dengan otitis media akut memandangkan sakit telinga dan gegendang telinga yang membengkak.",
+      "Kemungkinan etiologi virus disebabkan ketiadaan demam dan lelehan bernanah."
+    ],
+    "gemini_instructions": "Explain the clinician's reasoning for the primary diagnosis, linking it to specific subjective complaints, objective findings, or lab/imaging results.",
+    "notes_for_scribe": "This section justifies the diagnosis. Capture the key evidence supporting the clinician's conclusion."
+  },
+  {
+    "id": "A005",
+    "category": "Prognosis",
+    "keywords": ["prognosis", "ramalan", "outlook", "expectation"],
+    "example_phrases_en": [
+      "Prognosis is good with treatment adherence.",
+      "Patient is expected to make a full recovery within 7-10 days.",
+      "Condition is chronic, but manageable with lifestyle changes and medication."
+    ],
+    "example_phrases_ms": [
+      "Prognosis baik dengan kepatuhan rawatan.",
+      "Pesakit dijangka pulih sepenuhnya dalam masa 7-10 hari.",
+      "Keadaan ini kronik, tetapi boleh diuruskan dengan perubahan gaya hidup dan ubat-ubatan."
+    ],
+    "gemini_instructions": "Describe the clinician's outlook on the patient's condition and expected course of illness or recovery. Note any factors influencing the prognosis.",
+    "notes_for_scribe": "Prognosis can be short-term or long-term. Capture any specific timelines or conditions mentioned."
+  }
+]

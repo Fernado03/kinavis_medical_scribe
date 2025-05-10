@@ -1,0 +1,89 @@
+[
+  {
+    "id": "O001",
+    "category": "Vital Signs",
+    "keywords": ["blood pressure", "tekanan darah", "BP", "heart rate", "nadi", "HR", "temperature", "suhu", "respiratory rate", "pernafasan"],
+    "example_phrases_en": [
+      "Blood pressure is 120/80 mmHg.",
+      "Heart rate: 75 bpm, regular.",
+      "Temperature: 37.0°C.",
+      "Respiratory rate: 16 breaths/minute."
+    ],
+    "example_phrases_ms": [
+      "Tekanan darah 120/80 mmHg.",
+      "Kadar nadi: 75 bpm, teratur.",
+      "Suhu: 37.0°C.",
+      "Kadar pernafasan: 16 nafas/minit."
+    ],
+    "gemini_instructions": "Extract all listed vital signs and their values. Ensure units are included (e.g., mmHg, bpm, °C, breaths/minute). Note if any values are explicitly stated as abnormal.",
+    "notes_for_scribe": "Record vitals systematically. If a range is given (e.g. BP 120-130 / 80-85), record the range. Note the time vitals were taken if specified."
+  },
+  {
+    "id": "O002",
+    "category": "General Appearance",
+    "keywords": ["well-appearing", "keadaan baik", "no acute distress", "NAD", "alert", "sedar"],
+    "example_phrases_en": [
+      "Patient is alert, awake, and oriented x3.",
+      "Appears comfortable and in no acute distress.",
+      "General appearance is unremarkable."
+    ],
+    "example_phrases_ms": [
+      "Pesakit sedar, jaga, dan orientasi x3.",
+      "Kelihatan selesa dan tiada tanda-tanda distres akut.",
+      "Keadaan umum biasa."
+    ],
+    "gemini_instructions": "Describe the patient's general state as observed by the clinician. Note level of consciousness, comfort, and any signs of distress.",
+    "notes_for_scribe": "This is a general observation. Include specific descriptors if provided (e.g. 'cachectic', 'jaundiced', 'cyanotic')."
+  },
+  {
+    "id": "O003",
+    "category": "Physical Exam - Cardiovascular",
+    "keywords": ["heart sounds", "bunyi jantung", "S1S2", "murmur", "gallop", "rub"],
+    "example_phrases_en": [
+      "Cardiovascular exam reveals regular rate and rhythm, S1 and S2 are normal.",
+      "No murmurs, gallops, or rubs noted.",
+      "Peripheral pulses are 2+ and equal bilaterally."
+    ],
+    "example_phrases_ms": [
+      "Pemeriksaan kardiovaskular menunjukkan kadar dan ritma yang teratur, S1 dan S2 normal.",
+      "Tiada murmur, gallop, atau rub dikesan.",
+      "Nadi periferi 2+ dan sama di kedua-dua belah."
+    ],
+    "gemini_instructions": "Document findings from the cardiovascular examination, including heart rate/rhythm, heart sounds (S1, S2, any extra sounds like S3, S4), presence or absence of murmurs (and their characteristics if present), gallops, or rubs. Note findings related to peripheral pulses and edema if mentioned.",
+    "notes_for_scribe": "If a murmur is described, capture its grade (e.g., 2/6), timing (e.g., systolic), location (e.g., aortic area), and radiation."
+  },
+  {
+    "id": "O004",
+    "category": "Physical Exam - Respiratory",
+    "keywords": ["lungs clear", "paru-paru bersih", "breath sounds", "bunyi nafas", "wheezes", "rhonchi", "crackles"],
+    "example_phrases_en": [
+      "Lungs are clear to auscultation bilaterally.",
+      "Good air entry, no wheezes, rhonchi, or crackles.",
+      "Chest expansion is symmetrical."
+    ],
+    "example_phrases_ms": [
+      "Paru-paru bersih pada auskultasi di kedua-dua belah.",
+      "Kemasukan udara baik, tiada bunyi berdehit, ronki, atau krepitasi.",
+      "Pengembangan dada simetri."
+    ],
+    "gemini_instructions": "Record findings of the respiratory exam: effort, symmetry of expansion, percussion notes, and auscultation findings (breath sounds quality, presence of wheezes, rhonchi, crackles, rubs). Specify location of abnormal findings if provided (e.g., 'crackles at right base').",
+    "notes_for_scribe": "Distinguish between different types of adventitious sounds. 'Clear to auscultation' (CTA) is a common normal finding."
+  },
+  {
+    "id": "O005",
+    "category": "Lab Results",
+    "keywords": ["hemoglobin", "Hb", "white blood cell count", "WBC", "platelets", "PLT", "sodium", "Na", "potassium", "K"],
+    "example_phrases_en": [
+      "CBC shows Hemoglobin 13.5 g/dL, WBC 7.5 x 10^9/L, Platelets 250 x 10^9/L.",
+      "Electrolytes: Sodium 140 mmol/L, Potassium 4.0 mmol/L.",
+      "Urinalysis: negative for nitrites and leukocyte esterase."
+    ],
+    "example_phrases_ms": [
+      "CBC menunjukkan Hemoglobin 13.5 g/dL, WBC 7.5 x 10^9/L, Platelet 250 x 10^9/L.",
+      "Elektrolit: Natrium 140 mmol/L, Kalium 4.0 mmol/L.",
+      "Analisis air kencing: negatif untuk nitrit dan leukosit esterase."
+    ],
+    "gemini_instructions": "List all reported lab results with their values and units. If reference ranges are provided and a result is flagged as high or low, note this. Group related tests (e.g., CBC, electrolytes).",
+    "notes_for_scribe": "Ensure accuracy of lab values, units, and test names. If only abnormal results are dictated, clarify if normal results for common panels (e.g., CBC, BMP) should be assumed or explicitly stated as 'within normal limits'."
+  }
+]

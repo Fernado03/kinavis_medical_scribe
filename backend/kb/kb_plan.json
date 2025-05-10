@@ -1,0 +1,87 @@
+[
+  {
+    "id": "P001",
+    "category": "Medications (New)",
+    "keywords": ["prescribe", "preskripsi", "start medication", "mula ubat", "new drug", "ubat baru", "Amoxicillin", "Paracetamol"],
+    "example_phrases_en": [
+      "Prescribe Amoxicillin 500mg three times a day for 7 days.",
+      "Start Paracetamol 1g every 6 hours as needed for fever or pain.",
+      "Will initiate Metformin 500mg once daily."
+    ],
+    "example_phrases_ms": [
+      "Beri preskripsi Amoxicillin 500mg tiga kali sehari selama 7 hari.",
+      "Mula Paracetamol 1g setiap 6 jam jika perlu untuk demam atau sakit.",
+      "Akan mulakan Metformin 500mg sekali sehari."
+    ],
+    "gemini_instructions": "Identify any new medications prescribed. Extract the drug name, dosage, frequency, route (if specified), and duration. Note the indication if mentioned.",
+    "notes_for_scribe": "Ensure accuracy of drug names, dosages, and frequencies. Clarify any ambiguities (e.g., 'TID' vs 'three times a day')."
+  },
+  {
+    "id": "P002",
+    "category": "Medications (Adjusted)",
+    "keywords": ["adjust medication", "ubah suai ubat", "increase dose", "tambah dos", "decrease dose", "kurangkan dos", "change medication", "tukar ubat"],
+    "example_phrases_en": [
+      "Increase Lisinopril dose to 20mg daily.",
+      "Change current antibiotic to Ciprofloxacin.",
+      "Taper Prednisolone dose over the next two weeks."
+    ],
+    "example_phrases_ms": [
+      "Tambah dos Lisinopril kepada 20mg sehari.",
+      "Tukar antibiotik semasa kepada Ciprofloxacin.",
+      "Kurangkan dos Prednisolone secara beransur-ansur dalam dua minggu akan datang."
+    ],
+    "gemini_instructions": "Note any adjustments to existing medications, including dose changes (increase/decrease), frequency changes, or medication switches. Specify the drug and the exact change.",
+    "notes_for_scribe": "Clearly document the old regimen (if stated) and the new regimen for adjusted medications to avoid confusion."
+  },
+  {
+    "id": "P003",
+    "category": "Diagnostic Tests Ordered",
+    "keywords": ["order test", "pesan ujian", "blood test", "ujian darah", "X-ray", "ECG", "MRI", "CT scan"],
+    "example_phrases_en": [
+      "Order a full blood count and renal profile.",
+      "Schedule a chest X-ray to rule out pneumonia.",
+      "Plan for an outpatient MRI of the lumbar spine."
+    ],
+    "example_phrases_ms": [
+      "Pesan ujian darah penuh dan profil buah pinggang.",
+      "Jadualkan X-ray dada untuk menolak radang paru-paru.",
+      "Rancang untuk MRI tulang belakang lumbar sebagai pesakit luar."
+    ],
+    "gemini_instructions": "List all diagnostic tests ordered by the clinician. Specify the type of test and the reason for ordering if provided.",
+    "notes_for_scribe": "Include any specific instructions for the test (e.g., 'fasting blood sugar', 'contrast CT')."
+  },
+  {
+    "id": "P004",
+    "category": "Referrals",
+    "keywords": ["refer to", "rujuk kepada", "consultation", "konsultasi", "specialist", "pakar", "Cardiology", "Neurology"],
+    "example_phrases_en": [
+      "Refer patient to Cardiology for further evaluation of chest pain.",
+      "Arrange consultation with a Neurologist for persistent headaches.",
+      "Will seek opinion from Orthopedics regarding knee pain."
+    ],
+    "example_phrases_ms": [
+      "Rujuk pesakit kepada pakar Kardiologi untuk penilaian lanjut sakit dada.",
+      "Aturkan konsultasi dengan pakar Neurologi untuk sakit kepala yang berterusan.",
+      "Akan dapatkan pandangan daripada pakar Ortopedik mengenai sakit lutut."
+    ],
+    "gemini_instructions": "Note any referrals made to other specialists or services. Specify the specialty or service and the reason for referral.",
+    "notes_for_scribe": "Indicate if the referral is urgent or routine if specified."
+  },
+  {
+    "id": "P005",
+    "category": "Follow-up Instructions",
+    "keywords": ["follow up", "susulan", "return to clinic", "datang semula", "next appointment", "temujanji seterusnya", "RTC"],
+    "example_phrases_en": [
+      "Follow up in 2 weeks for review.",
+      "Return to clinic if symptoms worsen or no improvement in 3 days.",
+      "Next appointment scheduled for June 15th."
+    ],
+    "example_phrases_ms": [
+      "Susulan dalam 2 minggu untuk semakan.",
+      "Datang semula ke klinik jika gejala bertambah teruk atau tiada peningkatan dalam 3 hari.",
+      "Temujanji seterusnya dijadualkan pada 15 Jun."
+    ],
+    "gemini_instructions": "Document the plan for follow-up, including the timeframe (e.g., 'in 2 weeks', 'PRN'), specific date if given, and any conditions for returning sooner.",
+    "notes_for_scribe": "Be specific about follow-up timing. 'PRN' (as needed) is common but try to capture more specific triggers if mentioned."
+  }
+]

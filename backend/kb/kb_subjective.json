@@ -1,0 +1,87 @@
+[
+  {
+    "id": "S001",
+    "category": "Chief Complaint",
+    "keywords": ["headache", "migraine", "sakit kepala", "tension headache"],
+    "example_phrases_en": [
+      "Patient presents with a complaint of headache for the past 2 days.",
+      "My head has been hurting really badly since yesterday.",
+      "I'm here because of a persistent headache."
+    ],
+    "example_phrases_ms": [
+      "Pesakit datang dengan aduan sakit kepala sejak 2 hari lalu.",
+      "Kepala saya sakit sangat sejak semalam.",
+      "Saya di sini kerana sakit kepala yang tidak hilang-hilang."
+    ],
+    "gemini_instructions": "Extract the patient's primary stated reason for seeking medical attention. Note the duration if mentioned. Use patient's own words where possible or a concise summary.",
+    "notes_for_scribe": "This is often the first piece of information provided. Differentiate from symptoms mentioned later as part of HPI unless it's an elaboration of the chief complaint."
+  },
+  {
+    "id": "S002",
+    "category": "Chief Complaint",
+    "keywords": ["fever", "demam", "high temperature"],
+    "example_phrases_en": [
+      "Patient reports a fever for three days.",
+      "I've had a high temperature since Tuesday.",
+      "Feeling feverish and unwell."
+    ],
+    "example_phrases_ms": [
+      "Pesakit melaporkan demam selama tiga hari.",
+      "Saya demam panas sejak hari Selasa.",
+      "Rasa macam nak demam dan tidak sihat."
+    ],
+    "gemini_instructions": "Identify if fever is the main complaint. Note the duration and any associated symptoms like chills or body aches if mentioned.",
+    "notes_for_scribe": "Record the exact temperature if provided by the patient or clinician. Note if the patient has taken any medication for the fever."
+  },
+  {
+    "id": "S003",
+    "category": "History of Present Illness (HPI)",
+    "keywords": ["chest pain", "sakit dada", "angina"],
+    "example_phrases_en": [
+      "The chest pain started this morning, described as a dull ache.",
+      "Pain is located in the central chest and radiates to the left arm.",
+      "It gets worse with exertion and is relieved by rest."
+    ],
+    "example_phrases_ms": [
+      "Sakit dada bermula pagi ini, rasa seperti sakit tumpul.",
+      "Sakit di bahagian tengah dada dan merebak ke lengan kiri.",
+      "Ia menjadi lebih teruk apabila bergerak aktif dan lega apabila berehat."
+    ],
+    "gemini_instructions": "Detail the characteristics of the chest pain: onset, location, radiation, quality, severity (e.g., scale of 1-10), timing/duration, aggravating and relieving factors. Note associated symptoms like shortness of breath, nausea, or sweating.",
+    "notes_for_scribe": "Use the 'OLDCARTS' (Onset, Location, Duration, Character, Aggravating/Alleviating factors, Radiation, Timing, Severity) or similar mnemonic to ensure all aspects of HPI are covered for pain-related complaints."
+  },
+  {
+    "id": "S004",
+    "category": "Review of Systems (ROS)",
+    "keywords": ["cough", "batuk", "respiratory"],
+    "example_phrases_en": [
+      "Patient denies any cough or shortness of breath.",
+      "Reports a dry cough for the past week, no phlegm.",
+      "Occasional coughing spells, especially at night."
+    ],
+    "example_phrases_ms": [
+      "Pesakit menafikan sebarang batuk atau sesak nafas.",
+      "Melaporkan batuk kering sejak seminggu lalu, tiada kahak.",
+      "Kadang-kadang batuk, terutamanya pada waktu malam."
+    ],
+    "gemini_instructions": "For Review of Systems, note pertinent positives and negatives for the relevant system. If a symptom is present, briefly characterize it (e.g., 'dry cough', 'productive cough with yellow sputum').",
+    "notes_for_scribe": "ROS is a systematic inquiry. Ensure to capture 'denies' or 'no' for symptoms that are specifically asked about and are negative, as this is clinically important."
+  },
+  {
+    "id": "S005",
+    "category": "Past Medical History (PMHx)",
+    "keywords": ["hypertension", "darah tinggi", "high blood pressure", "HTN"],
+    "example_phrases_en": [
+      "Patient has a known history of hypertension, diagnosed 5 years ago.",
+      "Currently taking Amlodipine for high blood pressure.",
+      "No other significant past medical history."
+    ],
+    "example_phrases_ms": [
+      "Pesakit mempunyai sejarah darah tinggi, didiagnosis 5 tahun lalu.",
+      "Sedang mengambil Amlodipine untuk darah tinggi.",
+      "Tiada sejarah perubatan lain yang signifikan."
+    ],
+    "gemini_instructions": "List known chronic illnesses, significant past surgeries, hospitalizations, and major injuries. For chronic conditions, note the year of diagnosis and current management if mentioned.",
+    "notes_for_scribe": "Be precise with medical terminology. If a patient mentions a condition, try to confirm the formal diagnosis if possible (e.g., 'sugar problem' likely means Diabetes Mellitus)."
+  }
+]
